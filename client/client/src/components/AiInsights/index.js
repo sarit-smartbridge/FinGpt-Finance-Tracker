@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { FaMagic, FaCheckCircle, FaInfoCircle, FaExclamationTriangle } from 'react-icons/fa';
+import { apiUrl } from '../../utils/api';
 
 const severityMeta = {
     good: { icon: <FaCheckCircle />, cls: 'good' },
@@ -16,7 +17,7 @@ const AiInsights = ({ monthId }) => {
         setStatus('loading');
         setErrMsg('');
         try {
-            const response = await fetch(`http://localhost:5100/ai/insights/${monthId}`);
+            const response = await fetch(apiUrl(`/ai/insights/${monthId}`));
             const body = await response.json();
             if (response.ok) {
                 setData(body);

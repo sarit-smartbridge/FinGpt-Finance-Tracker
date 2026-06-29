@@ -3,6 +3,7 @@ import { Form, Button } from 'react-bootstrap';
 import styled from 'styled-components';
 import { FaArrowDown, FaArrowUp, FaCheck } from 'react-icons/fa';
 import Cookies from 'js-cookies';
+import { apiUrl } from '../../utils/api';
 
 const incomeCategories = ['Salary', 'Freelance', 'Investments', 'Other'];
 const expenseCategories = ['Rent', 'Utilities', 'Groceries'];
@@ -103,7 +104,7 @@ const AddIncomeAndExpense = () => {
 
     const handleIncomeSubmit = async (e) => {
         e.preventDefault();
-        const api = 'http://localhost:5100/expenses';
+        const api = apiUrl('/expenses');
         const userId = Cookies.getItem("userId");
 
         const data = {
@@ -155,7 +156,7 @@ const AddIncomeAndExpense = () => {
 
     const handleExpenseSubmit = async (e) => {
         e.preventDefault();
-        const api = 'http://localhost:5100/expenses';
+        const api = apiUrl('/expenses');
         const userId = Cookies.getItem("userId");
 
         const data = {

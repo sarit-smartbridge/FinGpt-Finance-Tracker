@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Form, Button } from "react-bootstrap";
 import { Link, useNavigate } from "react-router-dom";
 import { FaUserPlus, FaEye, FaEyeSlash } from "react-icons/fa";
+import { apiUrl } from "../../utils/api";
 
 const commonFields = [
   { controlId: "firstName", label: "First Name", type: "text" },
@@ -28,7 +29,7 @@ const Registration = () => {
     e.preventDefault();
 
     try {
-      const response = await fetch("http://localhost:5100/register", {
+      const response = await fetch(apiUrl("/register"), {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

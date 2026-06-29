@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import Cookies from 'js-cookies';
 import { FaWallet, FaPlus, FaTrash, FaExclamationTriangle } from 'react-icons/fa';
+import { apiUrl } from '../../utils/api';
 import './index.css';
 
 const EXPENSE_CATEGORIES = [
@@ -11,7 +12,7 @@ const EXPENSE_CATEGORIES = [
 const MONTHS = ['January', 'February', 'March', 'April', 'May', 'June',
     'July', 'August', 'September', 'October', 'November', 'December'];
 
-const API = 'http://localhost:5100/budgets';
+const API = apiUrl('/budgets');
 
 const BudgetManager = () => {
     const now = new Date();

@@ -3,6 +3,7 @@ import { Form, Button } from 'react-bootstrap';
 import { Link, useNavigate } from 'react-router-dom';
 import { FaWallet, FaEnvelope, FaLock, FaEye, FaEyeSlash } from 'react-icons/fa';
 import Cookies from 'js-cookies';
+import { apiUrl } from '../../utils/api';
 
 const commonFields = [
     { controlId: 'email', label: 'Email', type: 'email', icon: <FaEnvelope /> },
@@ -28,7 +29,7 @@ const Login = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            const response = await fetch('http://localhost:5100/login', {
+            const response = await fetch(apiUrl('/login'), {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

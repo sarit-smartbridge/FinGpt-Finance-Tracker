@@ -2,6 +2,7 @@ import React, { useState, useRef, useEffect } from 'react';
 import styled from 'styled-components';
 import Cookies from 'js-cookies';
 import { FaRobot, FaPaperPlane, FaUser, FaLightbulb } from 'react-icons/fa';
+import { apiUrl } from '../../utils/api';
 
 const Page = styled.div`
     min-height: 100vh;
@@ -186,7 +187,7 @@ const BudgetAssistant = () => {
         try {
             const userId = Cookies.getItem('userId');
             const apiMessages = next.filter((message) => message.role === 'user' || message.role === 'assistant');
-            const response = await fetch('http://localhost:5100/ai/chat', {
+            const response = await fetch(apiUrl('/ai/chat'), {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ userId, messages: apiMessages }),

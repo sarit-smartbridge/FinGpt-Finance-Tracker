@@ -10,6 +10,7 @@ import {
 } from 'react-icons/fa';
 import AiInsights from '../AiInsights';
 import { MonthlyTrendChart, CategoryPieChart } from '../Charts';
+import { apiUrl } from '../../utils/api';
 
 import './index.css';
 
@@ -79,7 +80,7 @@ const Track = () => {
 
     const handleEditRow = async (expenseId, tableName, rowId) => {
         try {
-            const response = await fetch(`http://localhost:5100/expenses/${expenseId}/tables/${tableName}/rows/${rowId}`);
+            const response = await fetch(apiUrl(`/expenses/${expenseId}/tables/${tableName}/rows/${rowId}`));
             const data = await response.json();
             if (response.ok) {
                 setEditRowData(data);
@@ -94,7 +95,7 @@ const Track = () => {
 
     const submitEditedRow = async (monthId, tableName, rowId) => {
         try {
-            const response = await fetch(`http://localhost:5100/expenses/${monthId}/tables/${tableName}/rows/${rowId}`, {
+            const response = await fetch(apiUrl(`/expenses/${monthId}/tables/${tableName}/rows/${rowId}`), {
                 method: 'PUT',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(editRowData),
@@ -113,7 +114,7 @@ const Track = () => {
 
     const handleDeleteRow = async (expenseId, tableName, rowId) => {
         try {
-            const response = await fetch(`http://localhost:5100/expenses/${expenseId}/tables/${tableName}/rows/${rowId}`, {
+            const response = await fetch(apiUrl(`/expenses/${expenseId}/tables/${tableName}/rows/${rowId}`), {
                 method: 'DELETE'
             });
 
@@ -137,7 +138,7 @@ const Track = () => {
         };
 
         try {
-            const response = await fetch('http://localhost:5100/addRow', {
+            const response = await fetch(apiUrl('/addRow'), {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
@@ -168,7 +169,7 @@ const Track = () => {
         const confirmed = window.confirm(`Delete all data for month ${month}, ${year}? This cannot be undone.`);
         if (!confirmed) return;
         try {
-            const response = await fetch('http://localhost:5100/expenses/month', {
+            const response = await fetch(apiUrl('/expenses/month'), {
                 method: 'DELETE',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ userId, monthYear: year.trim(), monthNumber: month.trim() }),
@@ -189,7 +190,7 @@ const Track = () => {
 
     const exportPdfe = async (month) => {
         try {
-            const response = await fetch('http://localhost:5100/generate-pdf', {
+            const response = await fetch(apiUrl('/generate-pdf'), {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ month }),
@@ -216,7 +217,7 @@ const Track = () => {
     const handleCategorize = async (monthId) => {
         setCategorizingId(monthId);
         try {
-            const response = await fetch('http://localhost:5100/ai/categorize', {
+            const response = await fetch(apiUrl('/ai/categorize'), {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ monthId }),
@@ -441,7 +442,7 @@ const Track = () => {
     };
 
     const getData = async () => {
-        const api = 'http://localhost:5100/expenses';
+        const api = apiUrl('/expenses');
         const userId = Cookies.getItem('userId');
         const options = {
             method: 'GET',
