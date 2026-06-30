@@ -6,7 +6,7 @@ import Cookies from 'js-cookies';
 import { apiUrl } from '../../utils/api';
 
 const incomeCategories = ['Salary', 'Freelance', 'Investments', 'Other'];
-const expenseCategories = ['Rent', 'Utilities', 'Groceries'];
+const expenseCategories = ['Rent', 'Utilities', 'Groceries', 'Other'];
 const monthOptions = [
     { value: '1', label: 'January' },
     { value: '2', label: 'February' },
@@ -90,6 +90,7 @@ const AddIncomeAndExpense = () => {
     const [formData, setFormData] = useState({
         amount: '',
         category: '',
+        customCategory: '',
         month: '',
         year: '',
         date: '',
@@ -99,7 +100,7 @@ const AddIncomeAndExpense = () => {
 
     const handleTypeChange = (newType) => {
         setType(newType);
-        setFormData((prev) => ({ ...prev, category: '' }));
+        setFormData((prev) => ({ ...prev, category: '', customCategory: '' }));
     };
 
     const handleIncomeSubmit = async (e) => {
@@ -107,6 +108,7 @@ const AddIncomeAndExpense = () => {
         const api = apiUrl('/expenses');
         const userId = Cookies.getItem("userId");
 
+        const categoryName = formData.category === 'Other' ? formData.customCategory : formData.category;
         const data = {
             userId: userId,
             monthYear: formData.year,
@@ -118,7 +120,7 @@ const AddIncomeAndExpense = () => {
                     rows: [
                         {
                             date: formData.date,
-                            name: formData.category,
+                            name: categoryName,
                             amount: Number(formData.amount)
                         }
                     ]
@@ -141,6 +143,7 @@ const AddIncomeAndExpense = () => {
                 setFormData({
                     amount: '',
                     category: '',
+                    customCategory: '',
                     month: '',
                     year: '',
                     date: '',
@@ -159,6 +162,7 @@ const AddIncomeAndExpense = () => {
         const api = apiUrl('/expenses');
         const userId = Cookies.getItem("userId");
 
+        const categoryName = formData.category === 'Other' ? formData.customCategory : formData.category;
         const data = {
             userId: userId,
             monthYear: formData.year,
@@ -170,7 +174,7 @@ const AddIncomeAndExpense = () => {
                     rows: [
                         {
                             date: formData.date,
-                            name: formData.category,
+                            name: categoryName,
                             amount: Number(formData.amount)
                         }
                     ]
@@ -193,6 +197,7 @@ const AddIncomeAndExpense = () => {
                 setFormData({
                     amount: '',
                     category: '',
+                    customCategory: '',
                     month: '',
                     year: '',
                     date: '',
@@ -259,6 +264,17 @@ const AddIncomeAndExpense = () => {
                             <option key={category} value={category}>{category}</option>
                         ))}
                     </Form.Select>
+                    {formData.category === 'Other' && (
+                        <Form.Control
+                            type="text"
+                            placeholder="Enter custom category"
+                            name="customCategory"
+                            value={formData.customCategory}
+                            onChange={handleInputChange}
+                            required
+                            className="mt-2"
+                        />
+                    )}
                 </Form.Group>
 
                 <div className="row g-3">
