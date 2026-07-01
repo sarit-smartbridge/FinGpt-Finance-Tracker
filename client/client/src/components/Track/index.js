@@ -29,6 +29,8 @@ const MONTH_OPTIONS = [
     { value: '12', label: 'December' },
 ];
 
+const getTransactionDate = (row = {}) => row.date || row.Date || '';
+
 const Track = () => {
     const [year, setYear] = useState('');
     const [month, setMonth] = useState('');
@@ -333,7 +335,7 @@ const Track = () => {
                                                         </td>
                                                         {editId !== row._id ? (
                                                             <>
-                                                                <td>{row.date}</td>
+                                                                <td>{getTransactionDate(row)}</td>
                                                                 <td>
                                                                     {row.name}
                                                                     {row.category && <span className="cat-badge">{row.category}</span>}
@@ -346,7 +348,7 @@ const Track = () => {
                                                                     <input
                                                                         className="form-control"
                                                                         type="text"
-                                                                        value={editRowData.date}
+                                                                        value={getTransactionDate(editRowData)}
                                                                         onChange={(e) => setEditRowData({ ...editRowData, date: e.target.value })}
                                                                     />
                                                                 </td>
