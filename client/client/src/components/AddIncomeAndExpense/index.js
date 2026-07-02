@@ -28,17 +28,19 @@ const Page = styled.div`
     display: flex;
     justify-content: center;
     align-items: flex-start;
-    background: var(--bg-0);
+    background: transparent;
 `;
 
 const StyledForm = styled(Form)`
     width: 100%;
     max-width: 560px;
     padding: 34px;
-    border: 1px solid var(--line);
+    border: 1px solid rgba(255, 255, 255, 0.76);
     border-radius: var(--radius-lg);
-    box-shadow: var(--shadow-lg);
-    background: var(--surface);
+    box-shadow: var(--shadow-3d);
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.94) 0%, rgba(255, 255, 255, 0.84) 100%);
+    backdrop-filter: blur(16px) saturate(160%);
+    -webkit-backdrop-filter: blur(16px) saturate(160%);
 `;
 
 const Title = styled.h2`
@@ -57,8 +59,8 @@ const Toggle = styled.div`
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 8px;
-    background: var(--surface-2);
-    border: 1px solid var(--line);
+    background: rgba(243, 245, 247, 0.84);
+    border: 1px solid rgba(208, 213, 221, 0.82);
     border-radius: var(--radius);
     padding: 5px;
     margin-bottom: 24px;
@@ -77,12 +79,14 @@ const Toggle = styled.div`
         transition: all 0.15s ease;
     }
     button.active-income {
-        background: var(--income);
+        background: linear-gradient(135deg, var(--income), #16a34a);
         color: #fff;
+        box-shadow: 0 10px 20px rgba(21, 128, 61, 0.18);
     }
     button.active-expense {
-        background: var(--expense);
+        background: linear-gradient(135deg, var(--expense), #e11d48);
         color: #fff;
+        box-shadow: 0 10px 20px rgba(190, 18, 60, 0.18);
     }
 `;
 

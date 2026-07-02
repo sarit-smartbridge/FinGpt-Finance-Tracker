@@ -3,6 +3,7 @@
     padding: 92px 18px 60px;
     display: flex;
     justify-content: center;
+    background: transparent;
 }
 .budget-shell {
     width: 100%;
@@ -31,12 +32,14 @@
     align-items: flex-end;
     gap: 12px;
     flex-wrap: wrap;
-    background: var(--surface);
-    border: 1px solid var(--line);
+    background: rgba(255, 255, 255, 0.9);
+    border: 1px solid rgba(208, 213, 221, 0.86);
     border-radius: var(--radius);
-    box-shadow: var(--shadow-sm);
+    box-shadow: var(--shadow-3d);
     padding: 18px;
     margin-bottom: 18px;
+    backdrop-filter: blur(14px) saturate(150%);
+    -webkit-backdrop-filter: blur(14px) saturate(150%);
 }
 .bf-field { display: flex; flex-direction: column; gap: 6px; flex: 1 1 180px; }
 .bf-field label { font-size: 0.78rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.04em; color: var(--ink-400); }
@@ -49,10 +52,10 @@
 }
 @media (max-width: 600px) { .budget-totals { grid-template-columns: 1fr; } }
 .bt-card {
-    background: var(--surface);
-    border: 1px solid var(--line);
+    background: rgba(255, 255, 255, 0.9);
+    border: 1px solid rgba(208, 213, 221, 0.86);
     border-radius: var(--radius);
-    box-shadow: var(--shadow-sm);
+    box-shadow: 0 16px 36px rgba(15, 23, 42, 0.08);
     padding: 16px 18px;
     display: flex; flex-direction: column; gap: 6px;
 }
@@ -76,7 +79,7 @@
 .budget-muted { color: var(--ink-500); }
 .budget-empty {
     text-align: center;
-    background: var(--surface);
+    background: rgba(255, 255, 255, 0.9);
     border: 1px dashed var(--line);
     border-radius: var(--radius-lg);
     padding: 54px 30px;
@@ -92,10 +95,10 @@
 
 .budget-list { display: flex; flex-direction: column; gap: 14px; }
 .budget-item {
-    background: var(--surface);
-    border: 1px solid var(--line);
+    background: rgba(255, 255, 255, 0.9);
+    border: 1px solid rgba(208, 213, 221, 0.86);
     border-radius: var(--radius);
-    box-shadow: var(--shadow-sm);
+    box-shadow: 0 18px 42px rgba(15, 23, 42, 0.1);
     padding: 16px 18px;
 }
 .bi-top { display: flex; align-items: center; justify-content: space-between; margin-bottom: 10px; }

@@ -1,4 +1,4 @@
-import { Fragment } from "react";
+import { Fragment, Suspense, lazy } from "react";
 import About from "../About";
 import Footer from "../Footer";
 import {
@@ -18,6 +18,8 @@ import {
     FaCheckCircle,
     FaRocket,
 } from "react-icons/fa";
+
+const FinanceScene = lazy(() => import("./FinanceScene"));
 
 const features = [
     {
@@ -67,6 +69,17 @@ const Home = () => (
                 <GhostButton to="/addincome-or-expense">
                     <FaPlusCircle /> Add a Transaction
                 </GhostButton>
+            </div>
+
+            <div className="hero-visual animate-up">
+                <Suspense fallback={<div className="finance-scene scene-loading" />}>
+                    <FinanceScene />
+                </Suspense>
+                <div className="metric-strip" aria-label="Finance summary preview">
+                    <span><strong>Income</strong> Rs. 48k</span>
+                    <span><strong>Expense</strong> Rs. 22k</span>
+                    <span><strong>Savings</strong> Rs. 26k</span>
+                </div>
             </div>
 
             <StatsBar>

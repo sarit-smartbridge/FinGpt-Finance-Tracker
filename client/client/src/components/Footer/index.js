@@ -3,10 +3,12 @@ import styled from 'styled-components';
 import { FaWallet, FaGithub, FaTwitter, FaLinkedin } from 'react-icons/fa';
 
 const FooterContainer = styled.footer`
-  background: var(--surface);
-  border-top: 1px solid var(--line);
+  background: rgba(255, 255, 255, 0.78);
+  border-top: 1px solid rgba(255, 255, 255, 0.72);
   padding: 28px 24px;
   color: var(--ink-500);
+  backdrop-filter: blur(16px) saturate(160%);
+  -webkit-backdrop-filter: blur(16px) saturate(160%);
 
   .inner {
     max-width: 1080px;
@@ -30,7 +32,7 @@ const FooterContainer = styled.footer`
     width: 32px;
     height: 32px;
     border-radius: var(--radius-sm);
-    background: var(--brand-600);
+    background: linear-gradient(135deg, var(--brand-600), #1d4ed8);
     color: #fff;
     display: grid;
     place-items: center;
@@ -44,7 +46,7 @@ const FooterContainer = styled.footer`
     border: 1px solid var(--line);
     display: grid;
     place-items: center;
-    background: var(--surface-2);
+    background: rgba(255, 255, 255, 0.78);
     color: var(--ink-500);
     cursor: pointer;
     transition: background 0.15s ease, color 0.15s ease, border-color 0.15s ease;

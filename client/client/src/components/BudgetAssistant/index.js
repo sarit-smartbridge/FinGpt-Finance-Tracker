@@ -9,7 +9,7 @@ const Page = styled.div`
     padding: 96px 16px 28px;
     display: flex;
     justify-content: center;
-    background: var(--bg-0);
+    background: transparent;
 `;
 
 const Shell = styled.div`
@@ -18,11 +18,13 @@ const Shell = styled.div`
     display: flex;
     flex-direction: column;
     height: calc(100vh - 124px);
-    background: var(--surface);
-    border: 1px solid var(--line);
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.94) 0%, rgba(255, 255, 255, 0.84) 100%);
+    border: 1px solid rgba(255, 255, 255, 0.76);
     border-radius: var(--radius-lg);
-    box-shadow: var(--shadow-lg);
+    box-shadow: var(--shadow-3d);
     overflow: hidden;
+    backdrop-filter: blur(16px) saturate(160%);
+    -webkit-backdrop-filter: blur(16px) saturate(160%);
 `;
 
 const HeaderBar = styled.div`
@@ -31,7 +33,7 @@ const HeaderBar = styled.div`
     gap: 14px;
     padding: 18px 22px;
     border-bottom: 1px solid var(--line);
-    background: #fbfcfd;
+    background: rgba(251, 252, 253, 0.88);
 
     .bot {
         width: 40px;
@@ -41,7 +43,8 @@ const HeaderBar = styled.div`
         place-items: center;
         font-size: 18px;
         color: #fff;
-        background: var(--brand-600);
+        background: linear-gradient(135deg, var(--brand-600), #1d4ed8);
+        box-shadow: 0 12px 24px rgba(15, 118, 110, 0.18);
     }
     h2 {
         margin: 0;
@@ -91,7 +94,7 @@ const Row = styled.div`
         line-height: 1.55;
         white-space: pre-wrap;
         border: 1px solid ${(p) => (p.$me ? 'transparent' : 'var(--line)')};
-        background: ${(p) => (p.$me ? 'var(--brand-600)' : 'var(--surface-2)')};
+        background: ${(p) => (p.$me ? 'linear-gradient(135deg, var(--brand-600), #1d4ed8)' : 'rgba(243, 245, 247, 0.9)')};
         color: ${(p) => (p.$me ? '#fff' : 'var(--ink-700)')};
         border-bottom-${(p) => (p.$me ? 'right' : 'left')}-radius: 4px;
     }
@@ -130,7 +133,7 @@ const Composer = styled.form`
     gap: 10px;
     padding: 16px 18px;
     border-top: 1px solid var(--line);
-    background: #fbfcfd;
+    background: rgba(251, 252, 253, 0.88);
 
     input {
         flex: 1;
@@ -151,7 +154,8 @@ const Composer = styled.form`
         border-radius: var(--radius-sm);
         color: #fff;
         cursor: pointer;
-        background: var(--brand-600);
+        background: linear-gradient(135deg, var(--brand-600), #1d4ed8);
+        box-shadow: 0 10px 20px rgba(15, 118, 110, 0.18);
     }
     button:hover:not(:disabled) { background: var(--brand-700); }
     button:disabled { opacity: 0.5; cursor: not-allowed; }

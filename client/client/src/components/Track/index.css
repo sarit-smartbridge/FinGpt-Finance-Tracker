@@ -24,12 +24,14 @@
     flex-wrap: wrap;
     align-items: flex-end;
     gap: 14px;
-    background: var(--surface);
-    border: 1px solid var(--line);
+    background: rgba(255, 255, 255, 0.9);
+    border: 1px solid rgba(208, 213, 221, 0.86);
     border-radius: var(--radius-lg);
     padding: 18px;
-    box-shadow: var(--shadow-sm);
+    box-shadow: var(--shadow-3d);
     margin-bottom: 14px;
+    backdrop-filter: blur(14px) saturate(150%);
+    -webkit-backdrop-filter: blur(14px) saturate(150%);
 }
 .track-toolbar .field {
     display: flex;
@@ -77,15 +79,17 @@
 }
 
 .month-card {
-    background: var(--surface);
-    border: 1px solid var(--line);
+    background: rgba(255, 255, 255, 0.91);
+    border: 1px solid rgba(208, 213, 221, 0.86);
     border-radius: var(--radius-lg);
-    box-shadow: var(--shadow-sm);
+    box-shadow: var(--shadow-3d);
     overflow: hidden;
     margin-bottom: 26px;
+    backdrop-filter: blur(14px) saturate(150%);
+    -webkit-backdrop-filter: blur(14px) saturate(150%);
 }
 .month-card-header {
-    background: #fbfcfd;
+    background: rgba(251, 252, 253, 0.9);
     border-bottom: 1px solid var(--line);
     color: var(--ink-900);
     padding: 18px 22px;
@@ -97,12 +101,12 @@
     width: 40px;
     height: 40px;
     border-radius: var(--radius-sm);
-    background: var(--brand-600);
+    background: linear-gradient(135deg, var(--brand-600), #1d4ed8);
     display: grid;
     place-items: center;
     font-size: 17px;
     color: #fff;
-    box-shadow: var(--shadow-sm);
+    box-shadow: 0 14px 28px rgba(15, 118, 110, 0.22);
 }
 .month-card-header h2 {
     color: var(--ink-900);
@@ -122,7 +126,7 @@
     border: 1px solid var(--line);
     border-radius: var(--radius);
     overflow-x: auto;
-    background: #fff;
+    background: rgba(255, 255, 255, 0.94);
 }
 .txn-block-head {
     display: flex;
@@ -239,8 +243,9 @@
 .summary-card {
     border-radius: var(--radius);
     padding: 18px;
-    border: 1px solid var(--line);
-    background: var(--surface);
+    border: 1px solid rgba(255, 255, 255, 0.72);
+    background: rgba(255, 255, 255, 0.86);
+    box-shadow: 0 16px 36px rgba(15, 23, 42, 0.08);
 }
 .summary-card .s-label {
     display: flex;
@@ -314,7 +319,7 @@
 .track-status { padding: 40px 0; }
 .track-empty {
     text-align: center;
-    background: var(--surface);
+    background: rgba(255, 255, 255, 0.9);
     border: 1px dashed var(--line-strong);
     border-radius: var(--radius-lg);
     padding: 58px 28px;
@@ -336,14 +341,14 @@
 
 /* Charts (FR-4) */
 .chart-card {
-    background: var(--surface);
-    border: 1px solid var(--line);
+    background: rgba(255, 255, 255, 0.9);
+    border: 1px solid rgba(255, 255, 255, 0.72);
     border-radius: var(--radius);
-    box-shadow: var(--shadow-sm);
+    box-shadow: 0 16px 36px rgba(15, 23, 42, 0.08);
     padding: 18px 18px 8px;
     margin-bottom: 22px;
 }
-.month-card-body .chart-card { margin-top: 22px; background: #fff; }
+.month-card-body .chart-card { margin-top: 22px; background: rgba(255, 255, 255, 0.94); }
 .chart-title {
     font-size: 1rem;
     font-weight: 700;
@@ -370,7 +375,8 @@
     padding: 18px;
     border-radius: var(--radius);
     border: 1px solid var(--line);
-    background: #fbfcfd;
+    background: rgba(251, 252, 253, 0.9);
+    box-shadow: 0 16px 36px rgba(15, 23, 42, 0.08);
 }
 .ai-insights-head {
     display: flex;

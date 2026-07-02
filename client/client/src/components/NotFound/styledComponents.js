@@ -9,12 +9,14 @@ export const NotFoundContainer = styled.div`
 
     .nf-card {
         text-align: center;
-        background: var(--surface);
-        border: 1px solid var(--line);
+        background: linear-gradient(180deg, rgba(255, 255, 255, 0.94) 0%, rgba(255, 255, 255, 0.84) 100%);
+        border: 1px solid rgba(255, 255, 255, 0.76);
         border-radius: var(--radius-lg);
-        box-shadow: var(--shadow-lg);
+        box-shadow: var(--shadow-3d);
         padding: 52px 46px;
         max-width: 440px;
+        backdrop-filter: blur(16px) saturate(160%);
+        -webkit-backdrop-filter: blur(16px) saturate(160%);
     }
     .nf-icon {
         width: 64px; height: 64px;
