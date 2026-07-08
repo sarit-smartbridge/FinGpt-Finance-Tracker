@@ -39,9 +39,9 @@ const Login = () => {
 
             if (response.ok) {
                 const data = await response.json();
-                Cookies.setItem('jwtToken', data.token, { expires: 30 })
-                Cookies.setItem('userId', data.user._id)
-                Cookies.setItem('userName', data.user.firstname)
+                Cookies.setItem('jwtToken', data.token, 30 * 24 * 60 * 60, '/')
+                Cookies.setItem('userId', data.user._id, 30 * 24 * 60 * 60, '/')
+                Cookies.setItem('userName', data.user.firstname, 30 * 24 * 60 * 60, '/')
                 navigate('/');
             } else {
                 alert("Email or Password didn't match");

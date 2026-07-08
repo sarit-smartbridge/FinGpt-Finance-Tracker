@@ -337,6 +337,7 @@ a:hover { color: var(--brand-700); }
   border-radius: var(--radius-sm);
   padding: 0.48rem 0.82rem;
   font-weight: 700;
+  cursor: pointer;
   display: inline-flex;
   align-items: center;
   gap: 7px;

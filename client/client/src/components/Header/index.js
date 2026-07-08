@@ -14,7 +14,9 @@ const Header = () => {
     const onLogout = () => {
         const res = window.confirm("Are you sure you want to log out?");
         if (res) {
-            Cookies.removeItem('jwtToken');
+            Cookies.removeItem('jwtToken', '/');
+            Cookies.removeItem('userId', '/');
+            Cookies.removeItem('userName', '/');
             navigate('/login');
         }
     };
