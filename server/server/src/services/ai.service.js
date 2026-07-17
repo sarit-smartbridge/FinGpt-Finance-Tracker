@@ -49,6 +49,26 @@ async function chat({ system, messages, schema, temperature, maxOutputTokens }) 
     return schema ? JSON.parse(text) : text;
 }
 
+async function analyzeImage({ data, mimeType = 'image/jpeg', prompt, schema }) {
+    if (!data || typeof data !== 'string') {
+        const error = new Error('Receipt image data is required');
+        error.status = 400;
+        throw error;
+    }
+    const config = {
+        temperature: 0,
+        thinkingConfig: { thinkingBudget: 0 },
+        responseMimeType: 'application/json',
+        responseSchema: schema,
+    };
+    const response = await getClient().models.generateContent({
+        model: GEMINI_MODEL,
+        contents: [{ role: 'user', parts: [{ text: prompt }, { inlineData: { mimeType, data } }] }],
+        config,
+    });
+    return JSON.parse(response.text || '{}');
+}
+
 async function categorizeTransactions(monthId) {
     const expense = await Expense.findById(monthId);
     if (!expense) {
@@ -196,4 +216,6 @@ module.exports = {
     categorizeTransactions,
     generateInsights,
     getAssistantReply,
+    generateStructured: chat,
+    analyzeImage,
 };

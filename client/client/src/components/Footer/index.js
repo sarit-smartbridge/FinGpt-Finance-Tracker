@@ -1,84 +1,13 @@
-import React from 'react';
-import styled from 'styled-components';
-import { FaWallet, FaGithub, FaTwitter, FaLinkedin } from 'react-icons/fa';
+import { NavLink } from 'react-router-dom';
+import { FaWallet, FaGithub, FaTwitter, FaLinkedin, FaArrowRight } from 'react-icons/fa';
 
-const FooterContainer = styled.footer`
-  background: rgba(255, 255, 255, 0.78);
-  border-top: 1px solid rgba(255, 255, 255, 0.72);
-  padding: 28px 24px;
-  color: var(--ink-500);
-  backdrop-filter: blur(16px) saturate(160%);
-  -webkit-backdrop-filter: blur(16px) saturate(160%);
-
-  .inner {
-    max-width: 1080px;
-    margin: 0 auto;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 16px;
-    flex-wrap: wrap;
-  }
-
-  .brand {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    font-weight: 850;
-    color: var(--ink-900);
-    font-size: 1.04rem;
-  }
-  .brand .logo {
-    width: 32px;
-    height: 32px;
-    border-radius: var(--radius-sm);
-    background: linear-gradient(135deg, var(--brand-600), #1d4ed8);
-    color: #fff;
-    display: grid;
-    place-items: center;
-  }
-
-  .socials { display: flex; gap: 10px; }
-  .socials button {
-    width: 36px;
-    height: 36px;
-    border-radius: var(--radius-sm);
-    border: 1px solid var(--line);
-    display: grid;
-    place-items: center;
-    background: rgba(255, 255, 255, 0.78);
-    color: var(--ink-500);
-    cursor: pointer;
-    transition: background 0.15s ease, color 0.15s ease, border-color 0.15s ease;
-  }
-  .socials button:hover {
-    background: var(--brand-soft);
-    color: var(--brand-700);
-    border-color: #bfe0dc;
-  }
-
-  .copy { font-size: 0.9rem; }
-`;
-
-const Footer = () => {
-  return (
-    <FooterContainer>
-      <div className="inner">
-        <div className="brand">
-          <span className="logo"><FaWallet /></span>
-          FinGPT
-        </div>
-        <p className="copy" style={{ margin: 0 }}>
-          &copy; {new Date().getFullYear()} FinGPT | Personal Expense Tracker
-        </p>
-        <div className="socials">
-          <button type="button" aria-label="GitHub"><FaGithub /></button>
-          <button type="button" aria-label="Twitter"><FaTwitter /></button>
-          <button type="button" aria-label="LinkedIn"><FaLinkedin /></button>
-        </div>
-      </div>
-    </FooterContainer>
-  );
-};
-
+const Footer = () => <footer className="relative mt-auto overflow-hidden border-t border-white/80 bg-[#e7efeb]/90 px-5 py-12 backdrop-blur-2xl">
+  <div className="pointer-events-none absolute -right-24 -top-32 size-80 rounded-full border-[55px] border-[#0f766e]/5" />
+  <div className="relative mx-auto grid max-w-6xl gap-10 md:grid-cols-[1.4fr_.8fr_.8fr]">
+    <div><div className="mb-4 flex items-center gap-3"><span className="grid size-11 place-items-center rounded-2xl bg-[#123d3a] text-white shadow-xl"><FaWallet/></span><span className="font-[var(--font-display)] text-2xl font-bold text-slate-900">FinGPT</span></div><p className="max-w-sm text-sm leading-6 text-slate-500">A calm, intelligent workspace for understanding spending, building better habits, and planning what comes next.</p></div>
+    <div><h3 className="mb-4 text-xs font-black uppercase tracking-[.16em] text-[#0f766e]">Workspace</h3><div className="grid gap-2 text-sm font-semibold text-slate-600"><NavLink to="/track">Track finances</NavLink><NavLink to="/budgets">Plan budgets</NavLink><NavLink to="/ai-lab" className="flex items-center gap-2">Explore AI Lab <FaArrowRight className="text-[10px]"/></NavLink></div></div>
+    <div><h3 className="mb-4 text-xs font-black uppercase tracking-[.16em] text-[#0f766e]">Connect</h3><div className="flex gap-2">{[[FaGithub,'GitHub'],[FaTwitter,'Twitter'],[FaLinkedin,'LinkedIn']].map(([Icon,name])=><button key={name} aria-label={name} className="grid size-10 place-items-center rounded-xl border border-white bg-white/65 text-slate-500 shadow-sm transition hover:-translate-y-1 hover:bg-[#123d3a] hover:text-white"><Icon/></button>)}</div></div>
+  </div>
+  <div className="relative mx-auto mt-10 max-w-6xl border-t border-slate-300/60 pt-5 text-xs text-slate-500">© {new Date().getFullYear()} FinGPT · Personal Expense Tracker</div>
+</footer>;
 export default Footer;

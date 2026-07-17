@@ -364,3 +364,231 @@ a:hover { color: var(--brand-700); }
   .animate-up { animation: none; }
   * { scroll-behavior: auto; }
 }
+
+/* Fixed navigation clearance for every application route. */
+.auth-page { padding-top: 124px !important; }
+.lab-page { padding-top: 128px !important; }
+.lab-tools { top: 112px !important; }
+
+@media (max-width: 620px) {
+  .auth-page, .lab-page { padding-top: 120px !important; }
+}
+
+.finance-scene { width: 100%; height: 100%; min-height: 420px; }
+.finance-scene canvas { display: block; width: 100%; height: 100%; }
+
+/* =========================================================================
+   Spatial UI layer
+   CSS-only depth, tactile motion and editorial composition.
+   ========================================================================= */
+
+:root {
+  --font-display: "Avenir Next", "Segoe UI Variable Display", "Segoe UI", sans-serif;
+  --font-ui: "Avenir Next", "Segoe UI Variable Text", "Segoe UI", sans-serif;
+  --font-numeric: "IBM Plex Mono", "SFMono-Regular", Consolas, monospace;
+  --pane-edge: rgba(255, 255, 255, 0.88);
+  --pane-shadow: 0 28px 70px rgba(24, 45, 52, 0.13),
+    0 8px 24px rgba(15, 118, 110, 0.07),
+    inset 0 1px 0 rgba(255, 255, 255, 0.96);
+  --ease-physical: cubic-bezier(.2, .8, .2, 1);
+}
+
+body {
+  font-family: var(--font-ui) !important;
+  background: #eef2ed;
+}
+
+h1, h2, h3, .font-display,
+.track-greeting, .budget-title, .auth-title {
+  font-family: var(--font-display) !important;
+  font-weight: 750 !important;
+  letter-spacing: -0.035em;
+}
+
+.s-value, .bt-value, .amount-cell,
+.metric-strip b, .budget-amount {
+  font-family: var(--font-numeric);
+  font-variant-numeric: tabular-nums;
+  letter-spacing: -0.035em;
+}
+
+.app-content::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background:
+    radial-gradient(38rem 32rem at 18% 12%, rgba(218, 184, 112, 0.16), transparent 70%),
+    radial-gradient(42rem 36rem at 84% 42%, rgba(15, 118, 110, 0.13), transparent 72%),
+    linear-gradient(115deg, rgba(255,255,255,.36), transparent 42%);
+  mix-blend-mode: multiply;
+}
+
+/* Fine depth grid: quiet enough to sit behind financial data. */
+.app-content::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  opacity: .24;
+  background-image:
+    linear-gradient(rgba(25, 74, 70, .07) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(25, 74, 70, .07) 1px, transparent 1px);
+  background-size: 48px 48px;
+  transform: perspective(700px) rotateX(58deg) scale(1.45) translateY(24%);
+  transform-origin: 50% 100%;
+  mask-image: linear-gradient(to bottom, transparent 8%, #000 68%, transparent 100%);
+}
+
+.glass-card, .auth-card, .month-card, .track-toolbar,
+.budget-form, .budget-card, .chart-card, .ai-insights {
+  border-color: var(--pane-edge) !important;
+  background: linear-gradient(145deg, rgba(255,255,255,.91), rgba(242,248,245,.72)) !important;
+  box-shadow: var(--pane-shadow) !important;
+  backdrop-filter: blur(22px) saturate(135%) !important;
+  -webkit-backdrop-filter: blur(22px) saturate(135%) !important;
+}
+
+.month-card, .track-toolbar, .budget-form, .budget-card,
+.chart-card, .ai-insights, .summary-card, .bt-card, .feature {
+  transform-style: preserve-3d;
+  transition: transform .42s var(--ease-physical), box-shadow .42s var(--ease-physical),
+    border-color .3s ease, background .3s ease !important;
+}
+
+.month-card:hover, .budget-card:hover, .chart-card:hover, .ai-insights:hover {
+  transform: perspective(1100px) translateY(-4px) rotateX(.6deg);
+  border-color: rgba(15, 118, 110, .22) !important;
+  box-shadow: 0 36px 84px rgba(24,45,52,.17), inset 0 1px 0 #fff !important;
+}
+
+.summary-card:hover, .bt-card:hover, .feature:hover {
+  transform: perspective(900px) translateY(-7px) rotateX(2deg) rotateY(-1deg) !important;
+  box-shadow: 0 26px 52px rgba(24,45,52,.15), inset 0 1px 0 rgba(255,255,255,.9) !important;
+}
+
+.btn, .icon-btn, .et-logout, .nav-link {
+  transform-style: preserve-3d;
+  transition: transform .28s var(--ease-physical), box-shadow .28s var(--ease-physical),
+    background .2s ease, color .2s ease !important;
+}
+
+.btn:hover, .et-logout:hover {
+  transform: perspective(600px) translateY(-3px) rotateX(3deg) !important;
+}
+
+.btn:active, .icon-btn:active, .et-logout:active {
+  transform: perspective(600px) translateY(1px) scale(.975) !important;
+  transition-duration: .08s !important;
+}
+
+.btn::after {
+  content: "";
+  position: absolute;
+  inset: 1px;
+  pointer-events: none;
+  border-radius: inherit;
+  border-top: 1px solid rgba(255,255,255,.55);
+}
+
+.btn { position: relative; overflow: hidden; }
+.animate-up { animation-fill-mode: backwards; }
+
+/* Deliberately editorial rather than an equal three-card strip. */
+.summary-grid, .budget-totals {
+  grid-template-columns: minmax(0, 1.35fr) minmax(0, .9fr) !important;
+  grid-auto-flow: dense;
+  align-items: stretch;
+}
+
+.summary-grid > :first-child, .budget-totals > :first-child {
+  grid-row: span 2;
+  min-height: 156px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.summary-grid > :not(:first-child), .budget-totals > :not(:first-child) {
+  min-height: 72px;
+}
+
+.ai-cards {
+  grid-template-columns: repeat(12, 1fr) !important;
+  align-items: start;
+}
+
+.ai-card { grid-column: span 5; }
+.ai-card:nth-child(3n + 1) { grid-column: span 7; }
+.ai-card:nth-child(even) { transform: translateY(8px); }
+
+/* Home feature collection: staggered editorial rhythm without markup changes. */
+.app-content div:has(> .feature) {
+  grid-template-columns: repeat(12, minmax(0, 1fr)) !important;
+  align-items: stretch;
+}
+.app-content div:has(> .feature) > .feature { grid-column: span 5; }
+.app-content div:has(> .feature) > .feature:nth-child(3n + 1) {
+  grid-column: span 7;
+  min-height: 210px;
+}
+.app-content div:has(> .feature) > .feature:nth-child(even) { margin-top: 22px; }
+
+@supports (animation-timeline: view()) {
+  .month-card, .budget-card, .ai-insights, .chart-card {
+    animation: spatial-rise linear both;
+    animation-timeline: view();
+    animation-range: entry 4% cover 28%;
+  }
+
+  .app-content::after {
+    animation: grid-drift linear both;
+    animation-timeline: scroll(root);
+  }
+}
+
+@keyframes spatial-rise {
+  from { opacity: .72; transform: perspective(1100px) translateY(34px) rotateX(3deg) scale(.985); }
+  to { opacity: 1; transform: perspective(1100px) translateY(0) rotateX(0) scale(1); }
+}
+
+@keyframes grid-drift {
+  from { background-position: 0 0, 0 0; }
+  to { background-position: 0 96px, 48px 48px; }
+}
+
+@media (max-width: 768px) {
+  .summary-grid, .budget-totals { grid-template-columns: 1fr !important; }
+  .summary-grid > :first-child, .budget-totals > :first-child {
+    grid-row: auto;
+    min-height: 112px;
+  }
+  .ai-card, .ai-card:nth-child(3n + 1) { grid-column: 1 / -1; }
+  .ai-card:nth-child(even) { transform: none; }
+  .app-content div:has(> .feature) > .feature,
+  .app-content div:has(> .feature) > .feature:nth-child(3n + 1) {
+    grid-column: 1 / -1;
+    min-height: auto;
+    margin-top: 0;
+  }
+  .app-content::after { opacity: .14; }
+}
+
+@media (hover: none) {
+  .month-card:hover, .budget-card:hover, .chart-card:hover, .ai-insights:hover,
+  .summary-card:hover, .bt-card:hover, .feature:hover, .btn:hover, .et-logout:hover {
+    transform: none !important;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .month-card, .track-toolbar, .budget-form, .budget-card, .chart-card,
+  .ai-insights, .summary-card, .bt-card, .feature, .btn, .icon-btn, .et-logout {
+    animation: none !important;
+    transition-duration: .01ms !important;
+    transform: none !important;
+  }
+  .app-content::after { animation: none !important; }
+}

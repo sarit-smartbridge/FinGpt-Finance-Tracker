@@ -1,0 +1,968 @@
+{
+  "source": "D:\\Personal Expense Tracker\\outputs\\FinGPT_AI_Augmented_Project_Documentation.docx",
+  "paragraph_count": 173,
+  "table_count": 0,
+  "section_count": 1,
+  "blocks": [
+    {
+      "kind": "paragraph",
+      "index": 0,
+      "style": "Heading 1",
+      "text": "FinGPT"
+    },
+    {
+      "kind": "paragraph",
+      "index": 1,
+      "style": "Heading 2",
+      "text": "Project Description:"
+    },
+    {
+      "kind": "paragraph",
+      "index": 2,
+      "style": "normal",
+      "text": "Welcome to FinGPT - an AI-augmented personal finance tracker that helps users record income and expenses, monitor savings, set category budgets, and understand spending patterns from one structured workspace."
+    },
+    {
+      "kind": "paragraph",
+      "index": 3,
+      "style": "normal",
+      "text": "Built with the MERN stack (MongoDB, Express.js, React, and Node.js), FinGPT combines monthly transaction ledgers, charts, PDF reporting, and a Gemini-powered assistant. The AI layer categorizes transactions, produces grounded monthly insights, and answers budgeting questions using the authenticated user's stored financial data. Amounts are presented in Indian Rupees."
+    },
+    {
+      "kind": "paragraph",
+      "index": 4,
+      "style": "normal",
+      "text": "FinGPT turns day-to-day financial records into clear, practical decisions without spreadsheet clutter."
+    },
+    {
+      "kind": "paragraph",
+      "index": 5,
+      "style": "Heading 2",
+      "text": "Scenario-Based Case Study:"
+    },
+    {
+      "kind": "paragraph",
+      "index": 6,
+      "style": "normal",
+      "text": "A salaried professional wants to control household spending but currently records transactions across notes and spreadsheets. At the end of each month, it is difficult to see how much was earned, where money was spent, whether category limits were exceeded, and what practical action should be taken next."
+    },
+    {
+      "kind": "paragraph",
+      "index": 7,
+      "style": "Heading 2",
+      "text": "The Solution:"
+    },
+    {
+      "kind": "paragraph",
+      "index": 8,
+      "style": "normal",
+      "text": "FinGPT provides a secure monthly finance workspace where the user records income and expenses, reviews calculated totals and charts, sets category budgets, exports a report, and receives AI-generated guidance grounded in the same stored records."
+    },
+    {
+      "kind": "paragraph",
+      "index": 9,
+      "style": "Heading 2",
+      "text": "How FinGPT Helps Users"
+    },
+    {
+      "kind": "paragraph",
+      "index": 10,
+      "style": "normal",
+      "text": "Secure Registration and Login - Create an account, sign in with hashed credentials, and use JWT-backed application sessions."
+    },
+    {
+      "kind": "paragraph",
+      "index": 11,
+      "style": "normal",
+      "text": "Monthly Transaction Tracking - Record income and expense rows by month and maintain them with add, edit, and delete actions."
+    },
+    {
+      "kind": "paragraph",
+      "index": 12,
+      "style": "normal",
+      "text": "Automatic Financial Totals - Recalculate total income, total expense, and current savings after each change."
+    },
+    {
+      "kind": "paragraph",
+      "index": 13,
+      "style": "normal",
+      "text": "AI Categorization and Insights - Use Gemini to classify transactions and generate short, data-backed observations."
+    },
+    {
+      "kind": "paragraph",
+      "index": 14,
+      "style": "normal",
+      "text": "Budget Planning - Set monthly limits by category and compare budgeted, spent, remaining, and over-budget amounts."
+    },
+    {
+      "kind": "paragraph",
+      "index": 15,
+      "style": "normal",
+      "text": "Charts and Reports - Review monthly trends and category distribution, then download a PDF summary."
+    },
+    {
+      "kind": "paragraph",
+      "index": 16,
+      "style": "normal",
+      "text": "Grounded Budgeting Assistant - Ask finance questions and receive concise answers based on real stored monthly data."
+    },
+    {
+      "kind": "paragraph",
+      "index": 17,
+      "style": "Heading 2",
+      "text": "System Requirements:"
+    },
+    {
+      "kind": "paragraph",
+      "index": 18,
+      "style": "normal",
+      "text": "The following software and hardware requirements support local development, testing, and deployment of the FinGPT web application."
+    },
+    {
+      "kind": "paragraph",
+      "index": 19,
+      "style": "Heading 2",
+      "text": "1. Software Requirements"
+    },
+    {
+      "kind": "paragraph",
+      "index": 20,
+      "style": "normal",
+      "text": "Operating System: Windows 10/11, macOS, or a modern Linux distribution."
+    },
+    {
+      "kind": "paragraph",
+      "index": 21,
+      "style": "normal",
+      "text": "Node.js: A current LTS release compatible with Vite 7 and the server dependencies."
+    },
+    {
+      "kind": "paragraph",
+      "index": 22,
+      "style": "normal",
+      "text": "npm: Used to install and run frontend and backend packages."
+    },
+    {
+      "kind": "paragraph",
+      "index": 23,
+      "style": "normal",
+      "text": "React 18 + Vite: Frontend application and development build tool."
+    },
+    {
+      "kind": "paragraph",
+      "index": 24,
+      "style": "normal",
+      "text": "Express.js 4: REST API and middleware framework."
+    },
+    {
+      "kind": "paragraph",
+      "index": 25,
+      "style": "normal",
+      "text": "MongoDB: Local MongoDB or MongoDB Atlas for users, monthly expenses, and budgets."
+    },
+    {
+      "kind": "paragraph",
+      "index": 26,
+      "style": "normal",
+      "text": "Gemini API key: Required for transaction categorization, insights, and assistant chat."
+    },
+    {
+      "kind": "paragraph",
+      "index": 27,
+      "style": "normal",
+      "text": "Browser: Latest Google Chrome, Microsoft Edge, or Firefox."
+    },
+    {
+      "kind": "paragraph",
+      "index": 28,
+      "style": "normal",
+      "text": "Postman or Insomnia: Recommended for API testing."
+    },
+    {
+      "kind": "paragraph",
+      "index": 29,
+      "style": "normal",
+      "text": "Visual Studio Code and Git: Recommended editor and version-control tools."
+    },
+    {
+      "kind": "paragraph",
+      "index": 30,
+      "style": "Heading 2",
+      "text": "2. Hardware Requirements"
+    },
+    {
+      "kind": "paragraph",
+      "index": 31,
+      "style": "normal",
+      "text": "Processor: Intel Core i5 / AMD Ryzen 5 or better recommended for smooth local development."
+    },
+    {
+      "kind": "paragraph",
+      "index": 32,
+      "style": "normal",
+      "text": "Memory: 8 GB minimum; 16 GB recommended when running the client, server, database, and browser together."
+    },
+    {
+      "kind": "paragraph",
+      "index": 33,
+      "style": "normal",
+      "text": "Storage: At least 1 GB free for source code, dependencies, builds, and local database data."
+    },
+    {
+      "kind": "paragraph",
+      "index": 34,
+      "style": "normal",
+      "text": "Display: 1920 x 1080 recommended for dashboard and responsive-layout validation."
+    },
+    {
+      "kind": "paragraph",
+      "index": 35,
+      "style": "Heading 2",
+      "text": "Project Architecture:"
+    },
+    {
+      "kind": "paragraph",
+      "index": 36,
+      "style": "normal",
+      "text": "FinGPT uses a modular client-server architecture:"
+    },
+    {
+      "kind": "paragraph",
+      "index": 37,
+      "style": "normal",
+      "text": "React + Vite client  <==>  Express + Node.js REST API  <==>  MongoDB, with Gemini AI and PDFKit as integrated services."
+    },
+    {
+      "kind": "paragraph",
+      "index": 38,
+      "style": "Heading 2",
+      "text": "Technical Architecture:"
+    },
+    {
+      "kind": "paragraph",
+      "index": 40,
+      "style": "normal",
+      "text": "Figure 1. FinGPT technical architecture"
+    },
+    {
+      "kind": "paragraph",
+      "index": 41,
+      "style": "normal",
+      "text": "The frontend communicates with route groups mounted by the Express application. Controllers validate request data and delegate reusable work to services. Mongoose models persist users, monthly expense documents, and category budgets. The AI service uses Gemini for structured categorization and insights plus a conversational budgeting assistant."
+    },
+    {
+      "kind": "paragraph",
+      "index": 42,
+      "style": "Heading 2",
+      "text": "1. User Interface (UI)"
+    },
+    {
+      "kind": "paragraph",
+      "index": 43,
+      "style": "normal",
+      "text": "The React 18 frontend uses Vite, React Router, Bootstrap, styled-components, Recharts, and a Three.js finance scene. Protected routes expose Home, Track, Add Transaction, Budgets, and Assistant pages after authentication."
+    },
+    {
+      "kind": "paragraph",
+      "index": 44,
+      "style": "Heading 2",
+      "text": "2. Web Server"
+    },
+    {
+      "kind": "paragraph",
+      "index": 45,
+      "style": "normal",
+      "text": "The Node.js and Express backend parses JSON and URL-encoded requests, enables CORS, connects to MongoDB, and mounts authentication, user, expense, report, AI, and budget routes."
+    },
+    {
+      "kind": "paragraph",
+      "index": 46,
+      "style": "Heading 2",
+      "text": "3. API Gateway / Router"
+    },
+    {
+      "kind": "paragraph",
+      "index": 47,
+      "style": "normal",
+      "text": "Route modules map HTTP endpoints to controllers for login and registration, monthly transaction CRUD, PDF generation, budget operations, and AI requests."
+    },
+    {
+      "kind": "paragraph",
+      "index": 48,
+      "style": "Heading 2",
+      "text": "4. Authentication Service"
+    },
+    {
+      "kind": "paragraph",
+      "index": 49,
+      "style": "normal",
+      "text": "Registration hashes passwords with bcrypt. Login validates the password and returns a signed JWT plus the user record. The frontend stores the session through cookies for protected navigation."
+    },
+    {
+      "kind": "paragraph",
+      "index": 50,
+      "style": "Heading 2",
+      "text": "5. Database (MongoDB)"
+    },
+    {
+      "kind": "paragraph",
+      "index": 51,
+      "style": "normal",
+      "text": "Mongoose schemas store users, monthly expense ledgers with embedded transaction rows, and monthly category budgets. Expense calculations are recomputed after writes."
+    },
+    {
+      "kind": "paragraph",
+      "index": 52,
+      "style": "Heading 2",
+      "text": "6. AI and Reporting Services"
+    },
+    {
+      "kind": "paragraph",
+      "index": 53,
+      "style": "normal",
+      "text": "Gemini categorizes transaction rows, creates structured insight cards, and answers chat questions from a compact financial snapshot. PDFKit streams a monthly report to the browser."
+    },
+    {
+      "kind": "paragraph",
+      "index": 54,
+      "style": "Heading 2",
+      "text": "ER Diagram:"
+    },
+    {
+      "kind": "paragraph",
+      "index": 56,
+      "style": "normal",
+      "text": "Figure 2. FinGPT document relationships"
+    },
+    {
+      "kind": "paragraph",
+      "index": 57,
+      "style": "Heading 2",
+      "text": "1. User and Expense Relationship"
+    },
+    {
+      "kind": "paragraph",
+      "index": 58,
+      "style": "normal",
+      "text": "Type: one-to-many. Each monthly Expense document stores the user's identifier, month/year, transaction tables, and calculated totals."
+    },
+    {
+      "kind": "paragraph",
+      "index": 59,
+      "style": "Heading 2",
+      "text": "2. User and Budget Relationship"
+    },
+    {
+      "kind": "paragraph",
+      "index": 60,
+      "style": "normal",
+      "text": "Type: one-to-many. Each Budget document belongs to a user and is uniquely scoped by category, month, and year."
+    },
+    {
+      "kind": "paragraph",
+      "index": 61,
+      "style": "Heading 2",
+      "text": "3. Expense and Transaction Row Relationship"
+    },
+    {
+      "kind": "paragraph",
+      "index": 62,
+      "style": "normal",
+      "text": "Type: embedded one-to-many. Each monthly document contains INCOME and EXPENSE tables whose rows store date, name, amount, and optional AI category."
+    },
+    {
+      "kind": "paragraph",
+      "index": 63,
+      "style": "Heading 2",
+      "text": "Features"
+    },
+    {
+      "kind": "paragraph",
+      "index": 64,
+      "style": "normal",
+      "text": "Role-aware session flow: Visitors can register or log in; authenticated users access finance routes and can log out."
+    },
+    {
+      "kind": "paragraph",
+      "index": 65,
+      "style": "normal",
+      "text": "Monthly ledger management: Add new month data, filter by month/year, edit or delete individual rows, and delete an entire month."
+    },
+    {
+      "kind": "paragraph",
+      "index": 66,
+      "style": "normal",
+      "text": "Calculated finance summary: Total income, total expense, and current savings remain synchronized with transaction rows."
+    },
+    {
+      "kind": "paragraph",
+      "index": 67,
+      "style": "normal",
+      "text": "Interactive analytics: Recharts renders a monthly trend bar chart and category spending pie chart."
+    },
+    {
+      "kind": "paragraph",
+      "index": 68,
+      "style": "normal",
+      "text": "Spending guardrail: The tracker warns when total expenses exceed half of monthly income."
+    },
+    {
+      "kind": "paragraph",
+      "index": 69,
+      "style": "normal",
+      "text": "AI transaction categorization: Gemini assigns controlled income or expense categories and writes them back to the month."
+    },
+    {
+      "kind": "paragraph",
+      "index": 70,
+      "style": "normal",
+      "text": "AI insight cards: The application returns a short summary and 3-5 severity-tagged insights grounded in real numbers."
+    },
+    {
+      "kind": "paragraph",
+      "index": 71,
+      "style": "normal",
+      "text": "Budget monitoring: Monthly category budgets report spent, remaining, percentage used, and over-budget state."
+    },
+    {
+      "kind": "paragraph",
+      "index": 72,
+      "style": "normal",
+      "text": "PDF report export: A downloadable report lists monthly transactions and totals."
+    },
+    {
+      "kind": "paragraph",
+      "index": 73,
+      "style": "normal",
+      "text": "Deployment readiness: Render and Vercel configuration files support split backend/frontend deployment."
+    },
+    {
+      "kind": "paragraph",
+      "index": 74,
+      "style": "Heading 2",
+      "text": "Roles and Responsibilities"
+    },
+    {
+      "kind": "paragraph",
+      "index": 75,
+      "style": "Heading 2",
+      "text": "1. Visitor"
+    },
+    {
+      "kind": "paragraph",
+      "index": 76,
+      "style": "normal",
+      "text": "Account access: Register a new account or log in with an existing email and password."
+    },
+    {
+      "kind": "paragraph",
+      "index": 77,
+      "style": "normal",
+      "text": "Public navigation: Use authentication pages; protected pages redirect when no JWT cookie is present."
+    },
+    {
+      "kind": "paragraph",
+      "index": 78,
+      "style": "Heading 2",
+      "text": "2. Registered User"
+    },
+    {
+      "kind": "paragraph",
+      "index": 79,
+      "style": "normal",
+      "text": "Transaction management: Create, review, edit, and delete monthly income and expense entries."
+    },
+    {
+      "kind": "paragraph",
+      "index": 80,
+      "style": "normal",
+      "text": "Financial review: Inspect totals, trends, category distribution, and spending alerts."
+    },
+    {
+      "kind": "paragraph",
+      "index": 81,
+      "style": "normal",
+      "text": "Budget planning: Set and remove monthly category limits and monitor use."
+    },
+    {
+      "kind": "paragraph",
+      "index": 82,
+      "style": "normal",
+      "text": "AI assistance: Categorize rows, generate insight cards, and ask grounded budgeting questions."
+    },
+    {
+      "kind": "paragraph",
+      "index": 83,
+      "style": "normal",
+      "text": "Reporting: Download a PDF copy of the selected monthly ledger."
+    },
+    {
+      "kind": "paragraph",
+      "index": 84,
+      "style": "Heading 2",
+      "text": "User Flow"
+    },
+    {
+      "kind": "paragraph",
+      "index": 86,
+      "style": "normal",
+      "text": "Figure 3. Registered user journey"
+    },
+    {
+      "kind": "paragraph",
+      "index": 87,
+      "style": "Heading 2",
+      "text": "MVC Pattern"
+    },
+    {
+      "kind": "paragraph",
+      "index": 89,
+      "style": "normal",
+      "text": "Figure 4. Backend route-controller-service-model flow"
+    },
+    {
+      "kind": "paragraph",
+      "index": 90,
+      "style": "normal",
+      "text": "FinGPT follows an MVC-oriented backend with an additional service layer. Models define data, controllers handle request/response responsibilities, routes expose endpoints, and services contain financial calculations, budget aggregation, and Gemini integration."
+    },
+    {
+      "kind": "paragraph",
+      "index": 91,
+      "style": "Heading 2",
+      "text": "Project Setup and Configuration"
+    },
+    {
+      "kind": "paragraph",
+      "index": 92,
+      "style": "Heading 2",
+      "text": "Creating the Project Folder"
+    },
+    {
+      "kind": "paragraph",
+      "index": 93,
+      "style": "normal",
+      "text": "1. Clone the repository. Use Git to obtain the project locally."
+    },
+    {
+      "kind": "paragraph",
+      "index": 94,
+      "style": "normal",
+      "text": "2. Open the root folder. The source contains separate client/client and server/server applications."
+    },
+    {
+      "kind": "paragraph",
+      "index": 95,
+      "style": "normal",
+      "text": "3. Install dependencies. Run npm install inside both nested application folders."
+    },
+    {
+      "kind": "paragraph",
+      "index": 96,
+      "style": "normal",
+      "text": "4. Create environment files. Copy each .env.example to .env and fill only local/deployment-specific values."
+    },
+    {
+      "kind": "paragraph",
+      "index": 97,
+      "style": "Heading 2",
+      "text": "Backend Development:"
+    },
+    {
+      "kind": "paragraph",
+      "index": 98,
+      "style": "Heading 2",
+      "text": "Backend Structure:"
+    },
+    {
+      "kind": "paragraph",
+      "index": 100,
+      "style": "normal",
+      "text": "Figure 5. Backend project structure"
+    },
+    {
+      "kind": "paragraph",
+      "index": 101,
+      "style": "normal",
+      "text": "server.js: Loads environment variables, imports the Express app, and listens on PORT (default 5100)."
+    },
+    {
+      "kind": "paragraph",
+      "index": 102,
+      "style": "normal",
+      "text": "src/app.js: Configures middleware, database startup, and route mounting."
+    },
+    {
+      "kind": "paragraph",
+      "index": 103,
+      "style": "normal",
+      "text": "controllers/: Coordinates authentication, expense, budget, AI, user, and report responses."
+    },
+    {
+      "kind": "paragraph",
+      "index": 104,
+      "style": "normal",
+      "text": "services/: Contains reusable calculations, budget aggregation, and Gemini workflows."
+    },
+    {
+      "kind": "paragraph",
+      "index": 105,
+      "style": "normal",
+      "text": "models/: Defines User, Expense, and Budget Mongoose schemas."
+    },
+    {
+      "kind": "paragraph",
+      "index": 106,
+      "style": "normal",
+      "text": "routes/: Declares REST endpoints and maps them to controllers."
+    },
+    {
+      "kind": "paragraph",
+      "index": 107,
+      "style": "normal",
+      "text": "utils/pdfReport.js: Streams the selected month as a PDFKit report."
+    },
+    {
+      "kind": "paragraph",
+      "index": 108,
+      "style": "Heading 2",
+      "text": "API Route Groups"
+    },
+    {
+      "kind": "paragraph",
+      "index": 110,
+      "style": "normal",
+      "text": "Figure 6. Route groups mounted by the Express application"
+    },
+    {
+      "kind": "paragraph",
+      "index": 111,
+      "style": "Heading 2",
+      "text": "Database Development:"
+    },
+    {
+      "kind": "paragraph",
+      "index": 112,
+      "style": "Heading 2",
+      "text": "1. Configure MongoDB"
+    },
+    {
+      "kind": "paragraph",
+      "index": 113,
+      "style": "normal",
+      "text": "Set MONGO_URI in server/server/.env. The supplied example defaults to mongodb://127.0.0.1:27017/exp for local development, while deployment can use MongoDB Atlas."
+    },
+    {
+      "kind": "paragraph",
+      "index": 115,
+      "style": "normal",
+      "text": "Figure 7. MongoDB connection module"
+    },
+    {
+      "kind": "paragraph",
+      "index": 116,
+      "style": "Heading 2",
+      "text": "2. Configure Environment Variables"
+    },
+    {
+      "kind": "paragraph",
+      "index": 117,
+      "style": "normal",
+      "text": "MONGO_URI: MongoDB connection string."
+    },
+    {
+      "kind": "paragraph",
+      "index": 118,
+      "style": "normal",
+      "text": "PORT: Backend port; defaults to 5100."
+    },
+    {
+      "kind": "paragraph",
+      "index": 119,
+      "style": "normal",
+      "text": "GEMINI_API_KEY: Google Gemini credential used only by the server."
+    },
+    {
+      "kind": "paragraph",
+      "index": 120,
+      "style": "normal",
+      "text": "GEMINI_MODEL: Model identifier; the project example uses gemini-2.5-flash."
+    },
+    {
+      "kind": "paragraph",
+      "index": 121,
+      "style": "normal",
+      "text": "JWT_SECRET: Long random key used to sign login tokens."
+    },
+    {
+      "kind": "paragraph",
+      "index": 122,
+      "style": "normal",
+      "text": "VITE_API_URL: Frontend base URL for the deployed or local backend."
+    },
+    {
+      "kind": "paragraph",
+      "index": 123,
+      "style": "Heading 2",
+      "text": "3. Create Schemas"
+    },
+    {
+      "kind": "paragraph",
+      "index": 124,
+      "style": "normal",
+      "text": "User schema: first name, last name, username, email, and bcrypt password hash."
+    },
+    {
+      "kind": "paragraph",
+      "index": 125,
+      "style": "normal",
+      "text": "Expense schema: user/month identity, transaction tables, embedded rows, and derived totals."
+    },
+    {
+      "kind": "paragraph",
+      "index": 126,
+      "style": "normal",
+      "text": "Budget schema: user, category, amount, month, and year with a unique compound index."
+    },
+    {
+      "kind": "paragraph",
+      "index": 127,
+      "style": "Heading 2",
+      "text": "Front-End Development:"
+    },
+    {
+      "kind": "paragraph",
+      "index": 128,
+      "style": "Heading 2",
+      "text": "Structure:"
+    },
+    {
+      "kind": "paragraph",
+      "index": 130,
+      "style": "normal",
+      "text": "Figure 8. Frontend component structure"
+    },
+    {
+      "kind": "paragraph",
+      "index": 131,
+      "style": "normal",
+      "text": "App.js: Defines BrowserRouter routes and lazy-loads the global Three.js finance backdrop."
+    },
+    {
+      "kind": "paragraph",
+      "index": 132,
+      "style": "normal",
+      "text": "Home/: Landing dashboard with finance overview, CTA links, and a 3D finance visual."
+    },
+    {
+      "kind": "paragraph",
+      "index": 133,
+      "style": "normal",
+      "text": "Track/: Monthly ledger, charts, row CRUD, AI tools, PDF export, and calculated summaries."
+    },
+    {
+      "kind": "paragraph",
+      "index": 134,
+      "style": "normal",
+      "text": "AddIncomeAndExpense/: Form for monthly income or expense entry with category selection."
+    },
+    {
+      "kind": "paragraph",
+      "index": 135,
+      "style": "normal",
+      "text": "BudgetManager/: Monthly category budget form, progress calculations, and deletion."
+    },
+    {
+      "kind": "paragraph",
+      "index": 136,
+      "style": "normal",
+      "text": "BudgetAssistant/: Gemini chat interface grounded in the signed-in user's data."
+    },
+    {
+      "kind": "paragraph",
+      "index": 137,
+      "style": "normal",
+      "text": "AiInsights/ and Charts/: Reusable AI insight cards and Recharts visualizations."
+    },
+    {
+      "kind": "paragraph",
+      "index": 138,
+      "style": "normal",
+      "text": "utils/api.js: Normalizes VITE_API_URL and produces consistent endpoint URLs."
+    },
+    {
+      "kind": "paragraph",
+      "index": 139,
+      "style": "Heading 2",
+      "text": "Project Execution:"
+    },
+    {
+      "kind": "paragraph",
+      "index": 140,
+      "style": "Heading 2",
+      "text": "Step 1: Start the Backend Server"
+    },
+    {
+      "kind": "paragraph",
+      "index": 141,
+      "style": "normal",
+      "text": "cd server/server"
+    },
+    {
+      "kind": "paragraph",
+      "index": 142,
+      "style": "normal",
+      "text": "npm install"
+    },
+    {
+      "kind": "paragraph",
+      "index": 143,
+      "style": "normal",
+      "text": "copy .env.example .env"
+    },
+    {
+      "kind": "paragraph",
+      "index": 144,
+      "style": "normal",
+      "text": "npm start"
+    },
+    {
+      "kind": "paragraph",
+      "index": 145,
+      "style": "normal",
+      "text": "The backend listens at http://localhost:5100 unless PORT is changed."
+    },
+    {
+      "kind": "paragraph",
+      "index": 146,
+      "style": "Heading 2",
+      "text": "Step 2: Start the Frontend"
+    },
+    {
+      "kind": "paragraph",
+      "index": 147,
+      "style": "normal",
+      "text": "cd client/client"
+    },
+    {
+      "kind": "paragraph",
+      "index": 148,
+      "style": "normal",
+      "text": "npm install"
+    },
+    {
+      "kind": "paragraph",
+      "index": 149,
+      "style": "normal",
+      "text": "copy .env.example .env"
+    },
+    {
+      "kind": "paragraph",
+      "index": 150,
+      "style": "normal",
+      "text": "npm start"
+    },
+    {
+      "kind": "paragraph",
+      "index": 151,
+      "style": "normal",
+      "text": "Vite serves the frontend at http://localhost:3000 by default in the project instructions. Ensure VITE_API_URL points to the backend."
+    },
+    {
+      "kind": "paragraph",
+      "index": 152,
+      "style": "Heading 2",
+      "text": "Step 3: Deployment"
+    },
+    {
+      "kind": "paragraph",
+      "index": 153,
+      "style": "normal",
+      "text": "Backend on Render: Use server/server as the root, npm install as the build command, npm start as the start command, and configure the four server environment variables."
+    },
+    {
+      "kind": "paragraph",
+      "index": 154,
+      "style": "normal",
+      "text": "Frontend on Vercel: Use client/client as the root, npm run build, dist as the output, and set VITE_API_URL to the Render service URL."
+    },
+    {
+      "kind": "paragraph",
+      "index": 155,
+      "style": "Heading 2",
+      "text": "Output Screenshots:"
+    },
+    {
+      "kind": "paragraph",
+      "index": 156,
+      "style": "Heading 2",
+      "text": "Home / Dashboard Page:"
+    },
+    {
+      "kind": "paragraph",
+      "index": 158,
+      "style": "normal",
+      "text": "Figure 9. Home / Dashboard Page"
+    },
+    {
+      "kind": "paragraph",
+      "index": 159,
+      "style": "Heading 2",
+      "text": "Monthly Tracker Page:"
+    },
+    {
+      "kind": "paragraph",
+      "index": 161,
+      "style": "normal",
+      "text": "Figure 10. Monthly Tracker Page"
+    },
+    {
+      "kind": "paragraph",
+      "index": 162,
+      "style": "Heading 2",
+      "text": "Add Transaction Page:"
+    },
+    {
+      "kind": "paragraph",
+      "index": 164,
+      "style": "normal",
+      "text": "Figure 11. Add Transaction Page"
+    },
+    {
+      "kind": "paragraph",
+      "index": 165,
+      "style": "Heading 2",
+      "text": "Budget Manager Page:"
+    },
+    {
+      "kind": "paragraph",
+      "index": 167,
+      "style": "normal",
+      "text": "Figure 12. Budget Manager Page"
+    },
+    {
+      "kind": "paragraph",
+      "index": 168,
+      "style": "Heading 2",
+      "text": "AI Budgeting Assistant Page:"
+    },
+    {
+      "kind": "paragraph",
+      "index": 170,
+      "style": "normal",
+      "text": "Figure 13. AI Budgeting Assistant Page"
+    },
+    {
+      "kind": "paragraph",
+      "index": 171,
+      "style": "Heading 2",
+      "text": "Code Repository"
+    },
+    {
+      "kind": "paragraph",
+      "index": 172,
+      "style": "normal",
+      "text": "GitHub: https://github.com/sarit-smartbridge/FinGpt-Finance-Tracker"
+    }
+  ]
+}

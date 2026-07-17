@@ -1,4 +1,5 @@
 const aiService = require('../services/ai.service');
+const aiTools = require('../services/ai.tools.service');
 
 function sendAiError(res, error, fallback) {
     console.error('AI error:', error);
@@ -43,8 +44,29 @@ async function chat(req, res) {
     }
 }
 
+async function tool(req, res) {
+    try {
+        const { userId, input } = req.body;
+        const result = await aiTools.run(userId, req.params.tool, input || {});
+        res.status(200).json(result);
+    } catch (error) {
+        sendAiError(res, error, 'Failed to run AI tool');
+    }
+}
+
+async function receipt(req, res) {
+    try {
+        const result = await aiTools.receipt(req.body || {});
+        res.status(200).json(result);
+    } catch (error) {
+        sendAiError(res, error, 'Failed to read receipt');
+    }
+}
+
 module.exports = {
     categorize,
     insights,
     chat,
+    tool,
+    receipt,
 };

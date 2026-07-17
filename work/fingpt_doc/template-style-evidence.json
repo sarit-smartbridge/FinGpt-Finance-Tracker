@@ -1,0 +1,172 @@
+{
+  "input": "E:\\NutriGPT AI Augmented Document.docx",
+  "fonts_by_char_count": {
+    "Calibri": 7737,
+    "Arial": 1268,
+    "Cambria": 1
+  },
+  "direct_run_formatting_runs": 316,
+  "direct_paragraph_formatting_paragraphs": 193,
+  "heading_like_paragraphs_not_heading_style": [
+    {
+      "para_index": 11,
+      "text": "1. User Registration & Authentication",
+      "style": "normal"
+    },
+    {
+      "para_index": 13,
+      "text": "2. Personalized Profile Setup & Targets",
+      "style": "normal"
+    },
+    {
+      "para_index": 15,
+      "text": "3. Semantic Food Search & Custom Food Logging",
+      "style": "normal"
+    },
+    {
+      "para_index": 17,
+      "text": "4. Daily Meal Logging",
+      "style": "normal"
+    },
+    {
+      "para_index": 19,
+      "text": "5. AI Nutrition Coach Chat (RAG)",
+      "style": "normal"
+    },
+    {
+      "para_index": 21,
+      "text": "6. Progress Tracking & Analytics Dashboard",
+      "style": "normal"
+    },
+    {
+      "para_index": 80,
+      "text": "Type: One-to-Many",
+      "style": "normal"
+    },
+    {
+      "para_index": 84,
+      "text": "Type: One-to-Many",
+      "style": "normal"
+    },
+    {
+      "para_index": 88,
+      "text": "Type: One-to-Many",
+      "style": "normal"
+    },
+    {
+      "para_index": 92,
+      "text": "Type: One-to-Many",
+      "style": "normal"
+    },
+    {
+      "para_index": 136,
+      "text": " Creating a project folder",
+      "style": "normal"
+    },
+    {
+      "para_index": 143,
+      "text": "Client setup (installing React app)",
+      "style": "normal"
+    },
+    {
+      "para_index": 150,
+      "text": "Server setup",
+      "style": "normal"
+    },
+    {
+      "para_index": 213,
+      "text": "2. mongoose.connect(...)",
+      "style": "normal"
+    },
+    {
+      "para_index": 222,
+      "text": "3..then(()=> console.log('Connected to MongoDB'))",
+      "style": "normal"
+    },
+    {
+      "para_index": 244,
+      "text": "src/components/layout/",
+      "style": "normal"
+    },
+    {
+      "para_index": 246,
+      "text": "src/components/ui/",
+      "style": "normal"
+    },
+    {
+      "para_index": 248,
+      "text": "src/components/",
+      "style": "normal"
+    },
+    {
+      "para_index": 252,
+      "text": "src/pages/",
+      "style": "normal"
+    },
+    {
+      "para_index": 261,
+      "text": "Step 1: Set Up the Frontend (React App)",
+      "style": "normal"
+    }
+  ],
+  "examples": {
+    "direct_paragraph_formatting": [
+      {
+        "para_index": 1,
+        "text": "NutriGPT",
+        "style": "Heading 1"
+      },
+      {
+        "para_index": 2,
+        "text": "Project Description:",
+        "style": "Heading 2"
+      },
+      {
+        "para_index": 3,
+        "text": "Welcome to NutriGPT \u2013 your personalized nutrition coach and AI-powered health assistant! Whether you are tracking daily ",
+        "style": "normal"
+      },
+      {
+        "para_index": 4,
+        "text": "With NutriGPT, users can register, build detailed profiles containing weight, height, age, activity level, dietary prefe",
+        "style": "normal"
+      },
+      {
+        "para_index": 5,
+        "text": "NutriGPT brings intelligent nutrition coaching to your fingertips.",
+        "style": "normal"
+      }
+    ],
+    "direct_run_formatting": [
+      {
+        "para_index": 1,
+        "run_text": "NutriGPT",
+        "style": "Heading 1"
+      },
+      {
+        "para_index": 2,
+        "run_text": "Project Description:",
+        "style": "Heading 2"
+      },
+      {
+        "para_index": 3,
+        "run_text": "NutriGPT",
+        "style": "normal"
+      },
+      {
+        "para_index": 3,
+        "run_text": "nutrition coach and AI-powered health assistant! Whether you are tracking daily ",
+        "style": "normal"
+      },
+      {
+        "para_index": 4,
+        "run_text": "MERN Stack (MongoDB, Express.js, React, Node.js)",
+        "style": "normal"
+      }
+    ]
+  },
+  "notes": [
+    "Direct formatting is not always wrong, but it often causes inconsistent output when templates change.",
+    "Heading-like paragraphs not using Heading styles can break TOC and accessibility."
+  ]
+}

@@ -1,5 +1,6 @@
 import { defineConfig, transformWithEsbuild } from 'vite';
 import react from '@vitejs/plugin-react';
+import tailwindcss from '@tailwindcss/vite';
 
 const jsAsJsx = () => ({
   name: 'load-js-files-as-jsx',
@@ -14,7 +15,7 @@ const jsAsJsx = () => ({
 });
 
 export default defineConfig({
-  plugins: [jsAsJsx(), react()],
+  plugins: [jsAsJsx(), react(), tailwindcss()],
   server: {
     host: '0.0.0.0',
     port: 3000,

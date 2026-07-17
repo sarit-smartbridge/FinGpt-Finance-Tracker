@@ -1,0 +1,1718 @@
+{
+  "source": "E:\\NutriGPT AI Augmented Document.docx",
+  "paragraph_count": 321,
+  "table_count": 0,
+  "section_count": 1,
+  "blocks": [
+    {
+      "kind": "paragraph",
+      "index": 0,
+      "style": "Heading 1",
+      "text": "NutriGPT"
+    },
+    {
+      "kind": "paragraph",
+      "index": 1,
+      "style": "Heading 2",
+      "text": "Project Description:"
+    },
+    {
+      "kind": "paragraph",
+      "index": 2,
+      "style": "normal",
+      "text": "Welcome to NutriGPT – your personalized nutrition coach and AI-powered health assistant! Whether you are tracking daily calories, monitoring macronutrients, searching for foods semantically, or consulting an AI assistant about your diet, NutriGPT makes managing your nutrition simple, data-driven, and personal."
+    },
+    {
+      "kind": "paragraph",
+      "index": 3,
+      "style": "normal",
+      "text": "With NutriGPT, users can register, build detailed profiles containing weight, height, age, activity level, dietary preferences, and allergies, and get automatically calculated personalized daily calorie and macro goals (protein, carbs, and fat). Built on the powerful MERN Stack (MongoDB, Express.js, React, Node.js), the application delivers a smooth, modern, and responsive health-tracking experience. Leveraging a Retrieval-Augmented Generation (RAG) pipeline powered by Gemini AI (gemini-2.5-flash for conversational coaching and gemini-embedding-001 for vector embeddings), NutriGPT offers highly personalized dietary guidance grounded directly in the user's real profile and daily meal log."
+    },
+    {
+      "kind": "paragraph",
+      "index": 4,
+      "style": "normal",
+      "text": "NutriGPT brings intelligent nutrition coaching to your fingertips."
+    },
+    {
+      "kind": "paragraph",
+      "index": 5,
+      "style": "Heading 2",
+      "text": "Scenario-Based Case Study:"
+    },
+    {
+      "kind": "paragraph",
+      "index": 6,
+      "style": "normal",
+      "text": "Sarah, a fitness enthusiast, wants to lose weight and optimize her protein intake. She finds tracking meals tedious because traditional apps rely on exact keyword matching for food searches (e.g., searching for \"egg\" doesn't show \"scrambled whites\" unless she scrolls forever). She also struggles to understand how to adjust her diet when she falls short of her daily protein target, and lacks access to personalized nutrition advice that is aware of what she actually ate earlier in the day."
+    },
+    {
+      "kind": "paragraph",
+      "index": 7,
+      "style": "Heading 2",
+      "text": "The Solution:"
+    },
+    {
+      "kind": "paragraph",
+      "index": 8,
+      "style": "normal",
+      "text": "NutriGPT provides an engaging and comprehensive health-tracking ecosystem designed to help users like Sarah reach their nutrition goals through AI-powered search and real-time grounding."
+    },
+    {
+      "kind": "paragraph",
+      "index": 9,
+      "style": "Heading 2",
+      "text": "How NutriGPT Helps Users"
+    },
+    {
+      "kind": "paragraph",
+      "index": 10,
+      "style": "normal",
+      "text": "1. User Registration & Authentication"
+    },
+    {
+      "kind": "paragraph",
+      "index": 11,
+      "style": "normal",
+      "text": "- Create a secure account, manage your credentials, and enjoy personalized dashboard access."
+    },
+    {
+      "kind": "paragraph",
+      "index": 12,
+      "style": "normal",
+      "text": "2. Personalized Profile Setup & Targets"
+    },
+    {
+      "kind": "paragraph",
+      "index": 13,
+      "style": "normal",
+      "text": "- Input age, weight, height, gender, activity level, and goals (weight loss, muscle gain, maintenance) to automatically calculate daily calorie and macro targets using the Mifflin-St Jeor equation."
+    },
+    {
+      "kind": "paragraph",
+      "index": 14,
+      "style": "normal",
+      "text": "3. Semantic Food Search & Custom Food Logging"
+    },
+    {
+      "kind": "paragraph",
+      "index": 15,
+      "style": "normal",
+      "text": "- Search the food database semantically (e.g., searching \"healthy green side\" returns \"spinach salad\" even without exact keyword matches) using vector embeddings, or add custom foods."
+    },
+    {
+      "kind": "paragraph",
+      "index": 16,
+      "style": "normal",
+      "text": "4. Daily Meal Logging"
+    },
+    {
+      "kind": "paragraph",
+      "index": 17,
+      "style": "normal",
+      "text": "- Log food items under breakfast, lunch, dinner, or snack categories, and track progress relative to daily calorie and macro targets."
+    },
+    {
+      "kind": "paragraph",
+      "index": 18,
+      "style": "normal",
+      "text": "5. AI Nutrition Coach Chat (RAG)"
+    },
+    {
+      "kind": "paragraph",
+      "index": 19,
+      "style": "normal",
+      "text": "- Chat with an AI assistant that dynamically pulls context from your profile metrics and daily food logs to provide highly personalized advice."
+    },
+    {
+      "kind": "paragraph",
+      "index": 20,
+      "style": "normal",
+      "text": "6. Progress Tracking & Analytics Dashboard"
+    },
+    {
+      "kind": "paragraph",
+      "index": 21,
+      "style": "normal",
+      "text": "- Access progress visualizations (charts of weight, target vs. consumed calories) to monitor your health journey over time."
+    },
+    {
+      "kind": "paragraph",
+      "index": 22,
+      "style": "Heading 2",
+      "text": "System Requirements:"
+    },
+    {
+      "kind": "paragraph",
+      "index": 23,
+      "style": "normal",
+      "text": "To ensure smooth development, deployment, and usage of the NutriGPT Web Application, certain system prerequisites must be met. These requirements are categorized into software, setup, and hardware specifications, all of which contribute to building a robust and scalable application."
+    },
+    {
+      "kind": "paragraph",
+      "index": 24,
+      "style": "Heading 2",
+      "text": "1. Software Requirements"
+    },
+    {
+      "kind": "paragraph",
+      "index": 25,
+      "style": "normal",
+      "text": "These are the essential tools and platforms required to develop, test, and run the application efficiently."
+    },
+    {
+      "kind": "paragraph",
+      "index": 26,
+      "style": "normal",
+      "text": "Operating System: Windows 10/11, macOS, or Linux — Supports cross-platform development and testing."
+    },
+    {
+      "kind": "paragraph",
+      "index": 27,
+      "style": "normal",
+      "text": "Node.js (v16 or above): Provides the runtime environment for building and running the backend server and managing dependencies. Download Node.js"
+    },
+    {
+      "kind": "paragraph",
+      "index": 28,
+      "style": "normal",
+      "text": "npm (v8 or above): Package manager to install dependencies for frontend and backend libraries."
+    },
+    {
+      "kind": "paragraph",
+      "index": 29,
+      "style": "normal",
+      "text": "React.js (v18): Frontend library used to build the responsive Single Page Application (SPA)."
+    },
+    {
+      "kind": "paragraph",
+      "index": 30,
+      "style": "normal",
+      "text": "Vite: Modern frontend build tool supplying fast Hot Module Replacement (HMR)."
+    },
+    {
+      "kind": "paragraph",
+      "index": 31,
+      "style": "normal",
+      "text": "Browser: Google Chrome, Firefox, or Microsoft Edge (latest versions) — For rendering and debugging the UI."
+    },
+    {
+      "kind": "paragraph",
+      "index": 32,
+      "style": "normal",
+      "text": "Express.js: Backend framework for building RESTful APIs."
+    },
+    {
+      "kind": "paragraph",
+      "index": 33,
+      "style": "normal",
+      "text": "MongoDB: NoSQL database (Local or Atlas) to store users, custom foods, meal logs, chat histories, and activity audits. Download MongoDB"
+    },
+    {
+      "kind": "paragraph",
+      "index": 34,
+      "style": "normal",
+      "text": "Gemini API Key: Free or commercial key from Google AI Studio to power vector embeddings and chat features. Get Gemini Key"
+    },
+    {
+      "kind": "paragraph",
+      "index": 35,
+      "style": "normal",
+      "text": "Postman / Insomnia: Tools for testing RESTful API endpoints during development."
+    },
+    {
+      "kind": "paragraph",
+      "index": 36,
+      "style": "normal",
+      "text": "Visual Studio Code: Preferred lightweight code editor with Terminal support and extension ecosystem."
+    },
+    {
+      "kind": "paragraph",
+      "index": 37,
+      "style": "normal",
+      "text": "Git & GitHub: Version control system to manage source code and pull requests."
+    },
+    {
+      "kind": "paragraph",
+      "index": 38,
+      "style": "Heading 2",
+      "text": "2. Hardware Requirements"
+    },
+    {
+      "kind": "paragraph",
+      "index": 39,
+      "style": "normal",
+      "text": "Describes the minimum and recommended specifications needed to support the development and usage of the application."
+    },
+    {
+      "kind": "paragraph",
+      "index": 40,
+      "style": "normal",
+      "text": "Processor: Intel Core i5 (8th Gen or above) / AMD Ryzen 5 or better — For fast compilation and multitasking."
+    },
+    {
+      "kind": "paragraph",
+      "index": 41,
+      "style": "normal",
+      "text": "RAM: Minimum 8 GB (16 GB recommended) — To run the backend server, frontend development client, IDE, and multiple browser tabs simultaneously."
+    },
+    {
+      "kind": "paragraph",
+      "index": 42,
+      "style": "normal",
+      "text": "Storage: At least 1 GB free space — For packages, local MongoDB databases, and development files."
+    },
+    {
+      "kind": "paragraph",
+      "index": 43,
+      "style": "normal",
+      "text": "Display: 1920x1080 resolution — Recommended for comfortable split-screen coding and UI design validation."
+    },
+    {
+      "kind": "paragraph",
+      "index": 44,
+      "style": "Heading 2",
+      "text": "Project Architecture:"
+    },
+    {
+      "kind": "paragraph",
+      "index": 45,
+      "style": "normal",
+      "text": "NutriGPT follows a modular full-stack architecture using the MERN stack:"
+    },
+    {
+      "kind": "paragraph",
+      "index": 46,
+      "style": "normal",
+      "text": "`Frontend (React + Vite) <==> Backend (Express + Node.js) <==> Database (MongoDB) + AI (Gemini API)`"
+    },
+    {
+      "kind": "paragraph",
+      "index": 47,
+      "style": "Heading 2",
+      "text": "Technical Architecture:"
+    },
+    {
+      "kind": "paragraph",
+      "index": 50,
+      "style": "normal",
+      "text": "The NutriGPT application is designed with a secure and modular technical architecture to ensure high performance, reliable food search, and context-aware chat interactions."
+    },
+    {
+      "kind": "paragraph",
+      "index": 51,
+      "style": "Heading 2",
+      "text": "1. User Interface (UI)"
+    },
+    {
+      "kind": "paragraph",
+      "index": 52,
+      "style": "normal",
+      "text": "The frontend is a modern web application built using React 18, Vite, Tailwind CSS, and Recharts. The user interface provides responsive dashboard analytics and forms:"
+    },
+    {
+      "kind": "paragraph",
+      "index": 53,
+      "style": "normal",
+      "text": "Dashboard Page: Displays progress charts, remaining calorie rings, logged meal summaries, and macro breakdowns."
+    },
+    {
+      "kind": "paragraph",
+      "index": 54,
+      "style": "normal",
+      "text": "Profile Setup & Management: Dynamic forms to enter weight, height, activity level, diet style, and allergies, triggering automatic target recalculation."
+    },
+    {
+      "kind": "paragraph",
+      "index": 55,
+      "style": "normal",
+      "text": "Meals Log: Add meals under breakfast, lunch, dinner, or snacks, choosing foods from search results and inputting servings."
+    },
+    {
+      "kind": "paragraph",
+      "index": 56,
+      "style": "normal",
+      "text": "AI Chat: Interactive message panel with conversational context and RAG details."
+    },
+    {
+      "kind": "paragraph",
+      "index": 57,
+      "style": "normal",
+      "text": "Admin Dashboard: Access-controlled interface to view all users, manage database foods, and monitor server operations."
+    },
+    {
+      "kind": "paragraph",
+      "index": 58,
+      "style": "Heading 2",
+      "text": "2. Web Server"
+    },
+    {
+      "kind": "paragraph",
+      "index": 59,
+      "style": "normal",
+      "text": "The backend is built on Node.js and Express.js using the MVC pattern. It handles API requests, routes, token verification, and interfaces with the database and AI services."
+    },
+    {
+      "kind": "paragraph",
+      "index": 60,
+      "style": "Heading 2",
+      "text": "3. API Gateway / Router"
+    },
+    {
+      "kind": "paragraph",
+      "index": 61,
+      "style": "normal",
+      "text": "Express routing layers map API routes `/api/auth`, `/api/foods`, `/api/meals`, `/api/chat`, and `/api/admin` to their respective controller functions."
+    },
+    {
+      "kind": "paragraph",
+      "index": 62,
+      "style": "Heading 2",
+      "text": "4. Authentication Service"
+    },
+    {
+      "kind": "paragraph",
+      "index": 63,
+      "style": "normal",
+      "text": "Handles secure login, registration, and role authorization using JWT (JSON Web Tokens) and bcrypt . Middlewares inspect requests for valid user roles (`user` or `admin`) before granting access to protected routes."
+    },
+    {
+      "kind": "paragraph",
+      "index": 64,
+      "style": "Heading 2",
+      "text": "5. Database (MongoDB)"
+    },
+    {
+      "kind": "paragraph",
+      "index": 65,
+      "style": "normal",
+      "text": "Mongoose schemas structure application data:"
+    },
+    {
+      "kind": "paragraph",
+      "index": 66,
+      "style": "normal",
+      "text": "Users: Credentials, health metrics, daily target macro bounds, and role."
+    },
+    {
+      "kind": "paragraph",
+      "index": 67,
+      "style": "normal",
+      "text": "Foods: Calorie values, nutrient breakdowns, diet tags (keto, vegan, etc.), and vector embeddings."
+    },
+    {
+      "kind": "paragraph",
+      "index": 68,
+      "style": "normal",
+      "text": "MealLogs: Groupings of food items consumed by a user on a specific date."
+    },
+    {
+      "kind": "paragraph",
+      "index": 69,
+      "style": "normal",
+      "text": "ChatHistories: Multi-turn message transcripts between the user and assistant."
+    },
+    {
+      "kind": "paragraph",
+      "index": 70,
+      "style": "normal",
+      "text": "ActivityLogs: System audit logs for tracking activity history."
+    },
+    {
+      "kind": "paragraph",
+      "index": 71,
+      "style": "Heading 2",
+      "text": "6. AI and RAG Pipeline Service"
+    },
+    {
+      "kind": "paragraph",
+      "index": 72,
+      "style": "normal",
+      "text": "Interfaces with Gemini API. Embeds search phrases via `gemini-embedding-001` to carry out semantic searches. When chatting, the service fetches current health profile data and daily meal logs, constructing a structured prompt for `gemini-2.5-flash` to generate personalized nutrition coaching."
+    },
+    {
+      "kind": "paragraph",
+      "index": 75,
+      "style": "Heading 2",
+      "text": "ER Diagram:"
+    },
+    {
+      "kind": "paragraph",
+      "index": 77,
+      "style": "normal",
+      "text": "Here are the relationships between collections in the NutriGPT database:"
+    },
+    {
+      "kind": "paragraph",
+      "index": 78,
+      "style": "Heading 2",
+      "text": "1. User and MealLog Relationship"
+    },
+    {
+      "kind": "paragraph",
+      "index": 79,
+      "style": "normal",
+      "text": "Type: One-to-Many"
+    },
+    {
+      "kind": "paragraph",
+      "index": 80,
+      "style": "normal",
+      "text": "Description: A single User can log multiple meals across different days."
+    },
+    {
+      "kind": "paragraph",
+      "index": 81,
+      "style": "normal",
+      "text": "Implementation: The MealLog schema stores a reference to the User ID (user field) and lists the logged items."
+    },
+    {
+      "kind": "paragraph",
+      "index": 82,
+      "style": "Heading 2",
+      "text": "2. User and ChatHistory Relationship"
+    },
+    {
+      "kind": "paragraph",
+      "index": 83,
+      "style": "normal",
+      "text": "Type: One-to-Many"
+    },
+    {
+      "kind": "paragraph",
+      "index": 84,
+      "style": "normal",
+      "text": "Description: A single User can maintain multiple chat history sessions."
+    },
+    {
+      "kind": "paragraph",
+      "index": 85,
+      "style": "normal",
+      "text": "Implementation: The ChatHistory schema contains a user field storing the user's ObjectId."
+    },
+    {
+      "kind": "paragraph",
+      "index": 86,
+      "style": "Heading 2",
+      "text": "3. User and ActivityLog Relationship"
+    },
+    {
+      "kind": "paragraph",
+      "index": 87,
+      "style": "normal",
+      "text": "Type: One-to-Many"
+    },
+    {
+      "kind": "paragraph",
+      "index": 88,
+      "style": "normal",
+      "text": "Description: A single User can trigger multiple activity log events (registration, login, profile updates)."
+    },
+    {
+      "kind": "paragraph",
+      "index": 89,
+      "style": "normal",
+      "text": "Implementation: Stored in the ActivityLog schema referencing the user's ObjectId."
+    },
+    {
+      "kind": "paragraph",
+      "index": 90,
+      "style": "Heading 2",
+      "text": "4. Food and MealLog.items Relationship"
+    },
+    {
+      "kind": "paragraph",
+      "index": 91,
+      "style": "normal",
+      "text": "Type: One-to-Many"
+    },
+    {
+      "kind": "paragraph",
+      "index": 92,
+      "style": "normal",
+      "text": "Description: A Food item defined in the global database can appear in multiple meal log entries."
+    },
+    {
+      "kind": "paragraph",
+      "index": 93,
+      "style": "normal",
+      "text": "Implementation: The nested items array inside the MealLog schema stores the Food reference ID (food field) and denormalizes the name and macro values for fast retrieval."
+    },
+    {
+      "kind": "paragraph",
+      "index": 94,
+      "style": "Heading 2",
+      "text": "Features"
+    },
+    {
+      "kind": "paragraph",
+      "index": 95,
+      "style": "normal",
+      "text": "Role-Based Access Control (RBAC): Users are partitioned into standard user and admin roles, guarding admin actions such as managing all registered accounts and modifying food entries."
+    },
+    {
+      "kind": "paragraph",
+      "index": 96,
+      "style": "normal",
+      "text": "Secure User Authentication: Secure account setup using email/password validation, salted password hashing via bcrypt , and stateless sessions utilizing JWTs."
+    },
+    {
+      "kind": "paragraph",
+      "index": 97,
+      "style": "normal",
+      "text": "Profile Setup & Target Engine: Collects physical stats and goal preferences, utilizing the Mifflin-St Jeor equation to estimate BMR, TDEE, and daily macro allocations (30% Protein, 40% Carbs, 30% Fat)."
+    },
+    {
+      "kind": "paragraph",
+      "index": 98,
+      "style": "normal",
+      "text": "Semantic Vector Search: Integrates local cosine-similarity vector searches over food embeddings, allowing users to search by category or synonym without exact match strings. Supports switching to Atlas Vector Search in production."
+    },
+    {
+      "kind": "paragraph",
+      "index": 99,
+      "style": "normal",
+      "text": "Interactive Dashboard Analytics: Visualizes daily calorie targets versus consumption, tracks macro splits in real-time, and graphs weight changes using Recharts."
+    },
+    {
+      "kind": "paragraph",
+      "index": 100,
+      "style": "normal",
+      "text": "Dynamic Daily Meal Logging: Quick addition of standard database items or custom manual foods to daily intake categories (breakfast, lunch, dinner, snack)."
+    },
+    {
+      "kind": "paragraph",
+      "index": 101,
+      "style": "normal",
+      "text": "AI Chat Assistant (RAG Pipeline): Natural-language conversational interface grounded in the user's profile information and daily calorie intake records."
+    },
+    {
+      "kind": "paragraph",
+      "index": 102,
+      "style": "normal",
+      "text": "Tailwind Dark/Light Mode Theme support: Implemented theme context providing toggleable light/dark modes for accessibility."
+    },
+    {
+      "kind": "paragraph",
+      "index": 103,
+      "style": "Heading 2",
+      "text": "Roles and responsibilities"
+    },
+    {
+      "kind": "paragraph",
+      "index": 104,
+      "style": "Heading 2",
+      "text": "1. Standard User"
+    },
+    {
+      "kind": "paragraph",
+      "index": 105,
+      "style": "normal",
+      "text": "Responsibilities:"
+    },
+    {
+      "kind": "paragraph",
+      "index": 106,
+      "style": "normal",
+      "text": "Account Management: Register, log in, modify password, complete profile setup  wizard. Tracker Interaction: Log foods under breakfast, lunch, dinner, snack, and create    custom foods."
+    },
+    {
+      "kind": "paragraph",
+      "index": 107,
+      "style": "normal",
+      "text": "AI Coaching: Query the AI coach for meals assessment, macro summaries, and tips."
+    },
+    {
+      "kind": "paragraph",
+      "index": 108,
+      "style": "normal",
+      "text": "Analytics: Review dashboard charts to monitor weight changes and calorie logs."
+    },
+    {
+      "kind": "paragraph",
+      "index": 109,
+      "style": "Heading 2",
+      "text": "2. Administrator"
+    },
+    {
+      "kind": "paragraph",
+      "index": 110,
+      "style": "normal",
+      "text": "Responsibilities:"
+    },
+    {
+      "kind": "paragraph",
+      "index": 111,
+      "style": "normal",
+      "text": "User Oversight: View list of registered accounts and promote standard users to admin."
+    },
+    {
+      "kind": "paragraph",
+      "index": 112,
+      "style": "normal",
+      "text": "Food Database Management: Create, edit, and delete items in the food database, and   trigger database seed scripts."
+    },
+    {
+      "kind": "paragraph",
+      "index": 113,
+      "style": "normal",
+      "text": "Platform Monitoring: Toggle production vector search models and check server status logs."
+    },
+    {
+      "kind": "paragraph",
+      "index": 114,
+      "style": "Heading 2",
+      "text": "User Flow"
+    },
+    {
+      "kind": "paragraph",
+      "index": 116,
+      "style": "Heading 2",
+      "text": "1. Standard User Journey"
+    },
+    {
+      "kind": "paragraph",
+      "index": 117,
+      "style": "normal",
+      "text": "Landing & Authentication:Accesses the application, registers, or logs in."
+    },
+    {
+      "kind": "paragraph",
+      "index": 118,
+      "style": "normal",
+      "text": "Profile Setup: If new, completes the profile form. Daily calorie and macro targets are automatically calculated."
+    },
+    {
+      "kind": "paragraph",
+      "index": 119,
+      "style": "normal",
+      "text": "Dashboard:Redirects to the homepage showing targets, calorie wheels, and logged intake."
+    },
+    {
+      "kind": "paragraph",
+      "index": 120,
+      "style": "normal",
+      "text": "Meal Tracking: Navigates to `/meals` or `/foods`. Performs semantic searches, sets portion quantities, and logs meals."
+    },
+    {
+      "kind": "paragraph",
+      "index": 121,
+      "style": "normal",
+      "text": "AI Consultation: Opens `/chat` and speaks to the nutrition coach. The RAG pipeline loads profile details and meal history to answer context-aware queries."
+    },
+    {
+      "kind": "paragraph",
+      "index": 122,
+      "style": "normal",
+      "text": "Progress Monitoring: Reviews charts for target adherence."
+    },
+    {
+      "kind": "paragraph",
+      "index": 123,
+      "style": "Heading 2",
+      "text": "2. Administrator Journey"
+    },
+    {
+      "kind": "paragraph",
+      "index": 124,
+      "style": "normal",
+      "text": "Login: Administrator logs in."
+    },
+    {
+      "kind": "paragraph",
+      "index": 125,
+      "style": "normal",
+      "text": "Navigation: Navigates to `/admin` using the admin route link in the navigation header."
+    },
+    {
+      "kind": "paragraph",
+      "index": 126,
+      "style": "normal",
+      "text": "Database Maintenance: Views and filters user metrics, adds new USDA reference foods, or deletes custom items."
+    },
+    {
+      "kind": "paragraph",
+      "index": 127,
+      "style": "Heading 2",
+      "text": "MVC Pattern"
+    },
+    {
+      "kind": "paragraph",
+      "index": 128,
+      "style": "Heading 2",
+      "text": "3"
+    },
+    {
+      "kind": "paragraph",
+      "index": 130,
+      "style": "normal",
+      "text": "The NutriGPT backend is structured using the Model-View-Controller (MVC) architectural pattern:"
+    },
+    {
+      "kind": "paragraph",
+      "index": 131,
+      "style": "normal",
+      "text": "Model Layer (Data): Structured schemas (Mongoose) that represent and save data logic inside MongoDB. Contains built-in helper hooks (e.g., hash passwords, calculate calorie targets). Located in models."
+    },
+    {
+      "kind": "paragraph",
+      "index": 132,
+      "style": "normal",
+      "text": "Controller Layer (Business Logic): Functions invoked by incoming requests. Validates body inputs, invokes Mongoose commands, processes AI embedding queries, and returns JSON responses. Located in controllers."
+    },
+    {
+      "kind": "paragraph",
+      "index": 133,
+      "style": "normal",
+      "text": "View Layer (Client Presentation): In the full-stack layout, the View is decoupled as the React client workspace located in client which communicates with the backend via API endpoints. The backend routers located in routes direct endpoints to their respective controllers."
+    },
+    {
+      "kind": "paragraph",
+      "index": 134,
+      "style": "Heading 2",
+      "text": "Project Setup And Configuration."
+    },
+    {
+      "kind": "paragraph",
+      "index": 135,
+      "style": "normal",
+      "text": "Creating a project folder"
+    },
+    {
+      "kind": "paragraph",
+      "index": 136,
+      "style": "normal",
+      "text": "Extract or clone the main project directory."
+    },
+    {
+      "kind": "paragraph",
+      "index": 137,
+      "style": "normal",
+      "text": "Navigate to the project root folder."
+    },
+    {
+      "kind": "paragraph",
+      "index": 138,
+      "style": "normal",
+      "text": "You will see the two main folders: `client` and `server`."
+    },
+    {
+      "kind": "paragraph",
+      "index": 139,
+      "style": "normal",
+      "text": "Open this project directory in Visual Studio Code."
+    },
+    {
+      "kind": "paragraph",
+      "index": 142,
+      "style": "normal",
+      "text": "Client setup (installing React app)"
+    },
+    {
+      "kind": "paragraph",
+      "index": 143,
+      "style": "normal",
+      "text": "1. Open a terminal in VS Code and navigate to the `client` folder:"
+    },
+    {
+      "kind": "paragraph",
+      "index": 144,
+      "style": "normal",
+      "text": "`cd client`"
+    },
+    {
+      "kind": "paragraph",
+      "index": 145,
+      "style": "normal",
+      "text": "2. Install dependencies:"
+    },
+    {
+      "kind": "paragraph",
+      "index": 146,
+      "style": "normal",
+      "text": "`npm install`"
+    },
+    {
+      "kind": "paragraph",
+      "index": 147,
+      "style": "normal",
+      "text": "3. Start the local React client:"
+    },
+    {
+      "kind": "paragraph",
+      "index": 148,
+      "style": "normal",
+      "text": "`npm run dev`"
+    },
+    {
+      "kind": "paragraph",
+      "index": 149,
+      "style": "normal",
+      "text": "Server setup"
+    },
+    {
+      "kind": "paragraph",
+      "index": 150,
+      "style": "normal",
+      "text": "1. Open a separate terminal tab in VS Code and navigate to the `server` folder:"
+    },
+    {
+      "kind": "paragraph",
+      "index": 151,
+      "style": "normal",
+      "text": "`cd server`"
+    },
+    {
+      "kind": "paragraph",
+      "index": 152,
+      "style": "normal",
+      "text": "2. Install dependencies:"
+    },
+    {
+      "kind": "paragraph",
+      "index": 153,
+      "style": "normal",
+      "text": "`npm install`"
+    },
+    {
+      "kind": "paragraph",
+      "index": 154,
+      "style": "Heading 2",
+      "text": "Backend Development:"
+    },
+    {
+      "kind": "paragraph",
+      "index": 155,
+      "style": "Heading 2",
+      "text": "Backend Structure:"
+    },
+    {
+      "kind": "paragraph",
+      "index": 158,
+      "style": "normal",
+      "text": "Development:"
+    },
+    {
+      "kind": "paragraph",
+      "index": 159,
+      "style": "normal",
+      "text": "config/: Configures database and third-party API clients."
+    },
+    {
+      "kind": "paragraph",
+      "index": 160,
+      "style": "normal",
+      "text": "database.js: Establishes MongoDB connection using Mongoose."
+    },
+    {
+      "kind": "paragraph",
+      "index": 161,
+      "style": "normal",
+      "text": "gemini.js: Initializes the Google Gemini AI client."
+    },
+    {
+      "kind": "paragraph",
+      "index": 163,
+      "style": "normal",
+      "text": "controllers/: Handles the request-response cycle and executes backend logic."
+    },
+    {
+      "kind": "paragraph",
+      "index": 164,
+      "style": "normal",
+      "text": "authController.js: Handles user signup, login, profile registration, and token validation."
+    },
+    {
+      "kind": "paragraph",
+      "index": 165,
+      "style": "normal",
+      "text": "foodController.js: Handles food creation, semantic and textual searches, and custom user food lists."
+    },
+    {
+      "kind": "paragraph",
+      "index": 166,
+      "style": "normal",
+      "text": "mealController.js: Handles logging, editing, deleting daily meal logs, and totals tracking."
+    },
+    {
+      "kind": "paragraph",
+      "index": 167,
+      "style": "normal",
+      "text": "chatController.js: Processes RAG-based chat prompts and reads/writes multi-turn chat sessions."
+    },
+    {
+      "kind": "paragraph",
+      "index": 168,
+      "style": "normal",
+      "text": "adminController.js: Contains operations to fetch all users and update roles."
+    },
+    {
+      "kind": "paragraph",
+      "index": 170,
+      "style": "normal",
+      "text": "middleware/: Request processing middleware."
+    },
+    {
+      "kind": "paragraph",
+      "index": 171,
+      "style": "normal",
+      "text": "authMiddleware.js: Validates incoming JWT tokens, attaches the user object, and verifies admin roles."
+    },
+    {
+      "kind": "paragraph",
+      "index": 172,
+      "style": "normal",
+      "text": "errorHandler.js: Global error catcher formatting exception responses."
+    },
+    {
+      "kind": "paragraph",
+      "index": 173,
+      "style": "normal",
+      "text": "validators.js: Validates request payloads for profiles, auth registers, and meal inputs."
+    },
+    {
+      "kind": "paragraph",
+      "index": 175,
+      "style": "normal",
+      "text": "models/: Mongoose schemas defining MongoDB collections."
+    },
+    {
+      "kind": "paragraph",
+      "index": 176,
+      "style": "normal",
+      "text": "User.js: Schema for user credentials, health profile parameters, and targets."
+    },
+    {
+      "kind": "paragraph",
+      "index": 177,
+      "style": "normal",
+      "text": "Food.js: Schema for food nutrition, diet tags, and vector embeddings."
+    },
+    {
+      "kind": "paragraph",
+      "index": 178,
+      "style": "normal",
+      "text": "MealLog.js: Schema for meal logs and daily totals."
+    },
+    {
+      "kind": "paragraph",
+      "index": 179,
+      "style": "normal",
+      "text": "ChatHistory.js: Schema for conversational chat message arrays."
+    },
+    {
+      "kind": "paragraph",
+      "index": 180,
+      "style": "normal",
+      "text": "ActivityLog.js: Audit schema tracking user events."
+    },
+    {
+      "kind": "paragraph",
+      "index": 182,
+      "style": "normal",
+      "text": "routes/: Routes HTTP endpoints to controllers."
+    },
+    {
+      "kind": "paragraph",
+      "index": 183,
+      "style": "normal",
+      "text": "authRoutes.js: /routes/authRoutes.js"
+    },
+    {
+      "kind": "paragraph",
+      "index": 184,
+      "style": "normal",
+      "text": "foodRoutes.js: routes/foodRoutes.js)"
+    },
+    {
+      "kind": "paragraph",
+      "index": 185,
+      "style": "normal",
+      "text": "mealRoutes.js : /routes/mealRoutes.js)"
+    },
+    {
+      "kind": "paragraph",
+      "index": 186,
+      "style": "normal",
+      "text": "chatRoutes.js : /routes/chatRoutes.js)"
+    },
+    {
+      "kind": "paragraph",
+      "index": 187,
+      "style": "normal",
+      "text": "adminRoutes.js : /routes/adminRoutes.js)"
+    },
+    {
+      "kind": "paragraph",
+      "index": 188,
+      "style": "normal",
+      "text": "services/: Encapsulates service integrations."
+    },
+    {
+      "kind": "paragraph",
+      "index": 189,
+      "style": "normal",
+      "text": "ragService.js: Generates RAG prompts by gathering daily foods and physical statistics."
+    },
+    {
+      "kind": "paragraph",
+      "index": 190,
+      "style": "normal",
+      "text": "embeddingService.js: Interfaces with the Gemini embedding model to generate numerical vectors."
+    },
+    {
+      "kind": "paragraph",
+      "index": 191,
+      "style": "normal",
+      "text": "vectorSearchService.js: Handles local cosine-similarity comparisons or MongoDB Atlas Vector Search pipelines."
+    },
+    {
+      "kind": "paragraph",
+      "index": 193,
+      "style": "normal",
+      "text": "scripts/: Utility tools."
+    },
+    {
+      "kind": "paragraph",
+      "index": 194,
+      "style": "normal",
+      "text": "seedFoods.js: Populates the food collection with initial USDA references."
+    },
+    {
+      "kind": "paragraph",
+      "index": 195,
+      "style": "normal",
+      "text": "generateEmbeddings.js: Generates embeddings for seeded foods lacking them."
+    },
+    {
+      "kind": "paragraph",
+      "index": 196,
+      "style": "Heading 2",
+      "text": "Entry Point – server.js"
+    },
+    {
+      "kind": "paragraph",
+      "index": 197,
+      "style": "normal",
+      "text": "The main file that boots the backend server:"
+    },
+    {
+      "kind": "paragraph",
+      "index": 198,
+      "style": "normal",
+      "text": "Initializes express and configures security headers (helmet) and CORS rules."
+    },
+    {
+      "kind": "paragraph",
+      "index": 199,
+      "style": "normal",
+      "text": "Connects to the database by executing `connectDB()` from `config/database.js`."
+    },
+    {
+      "kind": "paragraph",
+      "index": 200,
+      "style": "normal",
+      "text": "Configures logging middleware (morgan) and rate-limiting blocks."
+    },
+    {
+      "kind": "paragraph",
+      "index": 201,
+      "style": "normal",
+      "text": "Mounts routes under `/api/auth`, `/api/foods`, `/api/meals`, `/api/chat`, and `/api/admin`."
+    },
+    {
+      "kind": "paragraph",
+      "index": 202,
+      "style": "normal",
+      "text": "Starts the HTTP server on the configured port."
+    },
+    {
+      "kind": "paragraph",
+      "index": 203,
+      "style": "Heading 2",
+      "text": "Database Development:"
+    },
+    {
+      "kind": "paragraph",
+      "index": 204,
+      "style": "Heading 2",
+      "text": "1\\. Configure MongoDB:"
+    },
+    {
+      "kind": "paragraph",
+      "index": 205,
+      "style": "normal",
+      "text": "Install Mongoose:"
+    },
+    {
+      "kind": "paragraph",
+      "index": 206,
+      "style": "normal",
+      "text": "`npm install mongoose`"
+    },
+    {
+      "kind": "paragraph",
+      "index": 207,
+      "style": "Heading 2",
+      "text": "Create Database connection:"
+    },
+    {
+      "kind": "paragraph",
+      "index": 209,
+      "style": "normal",
+      "text": "Now, make sure the database is connected before performing any of the actions through the backend. The connection code looks similar to the one provided below.\n1.Const mongoose = require('mongoose');"
+    },
+    {
+      "kind": "paragraph",
+      "index": 210,
+      "style": "normal",
+      "text": "Purpose: Loads the Mongoose library so you can use it in your application."
+    },
+    {
+      "kind": "paragraph",
+      "index": 211,
+      "style": "normal",
+      "text": "Mongoose is a powerful Object Data Modeling (ODM) tool that helps interact with MongoDB using JavaScript objects."
+    },
+    {
+      "kind": "paragraph",
+      "index": 212,
+      "style": "normal",
+      "text": "2. mongoose.connect(...)"
+    },
+    {
+      "kind": "paragraph",
+      "index": 213,
+      "style": "normal",
+      "text": "mongodb://127.0.0.1:27017/EventManagement'"
+    },
+    {
+      "kind": "paragraph",
+      "index": 214,
+      "style": "normal",
+      "text": "mongodb://: Specifies the MongoDB protocol."
+    },
+    {
+      "kind": "paragraph",
+      "index": 215,
+      "style": "normal",
+      "text": "127.0.0.1: Localhost IP address – means the database is running on your local machine."
+    },
+    {
+      "kind": "paragraph",
+      "index": 216,
+      "style": "normal",
+      "text": "27017: Default port for MongoDB."
+    },
+    {
+      "kind": "paragraph",
+      "index": 217,
+      "style": "normal",
+      "text": "Roomly: Name of the database you want to use."
+    },
+    {
+      "kind": "paragraph",
+      "index": 218,
+      "style": "normal",
+      "text": "If this database doesn't exist, MongoDB will create it once data is inserted."
+    },
+    {
+      "kind": "paragraph",
+      "index": 219,
+      "style": "normal",
+      "text": "useNewUrlParser: true: Uses MongoDB’s updated URL string parser."
+    },
+    {
+      "kind": "paragraph",
+      "index": 220,
+      "style": "normal",
+      "text": "useUnifiedTopology: true: Enables the new connection engine, which improves connection stability and performance."
+    },
+    {
+      "kind": "paragraph",
+      "index": 221,
+      "style": "normal",
+      "text": "3..then(()=> console.log('Connected to MongoDB'))"
+    },
+    {
+      "kind": "paragraph",
+      "index": 222,
+      "style": "normal",
+      "text": "If the connection is successful, this code runs."
+    },
+    {
+      "kind": "paragraph",
+      "index": 223,
+      "style": "normal",
+      "text": "It prints a confirmation message to your console:"
+    },
+    {
+      "kind": "paragraph",
+      "index": 224,
+      "style": "normal",
+      "text": "4..catch((err)=>console.error('MongoDB connection error:', err));"
+    },
+    {
+      "kind": "paragraph",
+      "index": 225,
+      "style": "normal",
+      "text": "If the connection fails, the error is caught here."
+    },
+    {
+      "kind": "paragraph",
+      "index": 226,
+      "style": "normal",
+      "text": "Helps with debugging by printing the error details"
+    },
+    {
+      "kind": "paragraph",
+      "index": 230,
+      "style": "normal",
+      "text": "```"
+    },
+    {
+      "kind": "paragraph",
+      "index": 231,
+      "style": "Heading 2",
+      "text": "Create Schemas:"
+    },
+    {
+      "kind": "paragraph",
+      "index": 232,
+      "style": "normal",
+      "text": "Configure Mongoose schemas with indexes, models, and calculation hooks:"
+    },
+    {
+      "kind": "paragraph",
+      "index": 233,
+      "style": "normal",
+      "text": "User Schema: Contains properties for name, email, role, health profile parameters, and methods to compute daily target calorie and macronutrient limits."
+    },
+    {
+      "kind": "paragraph",
+      "index": 235,
+      "style": "normal",
+      "text": "Food Schema: Stores ingredient macros and a numeric array for vector embeddings."
+    },
+    {
+      "kind": "paragraph",
+      "index": 237,
+      "style": "normal",
+      "text": "MealLog Schema: Stores logged items and daily totals."
+    },
+    {
+      "kind": "paragraph",
+      "index": 239,
+      "style": "Heading 2",
+      "text": "Front-End Development:"
+    },
+    {
+      "kind": "paragraph",
+      "index": 240,
+      "style": "Heading 2",
+      "text": "Structure:"
+    },
+    {
+      "kind": "paragraph",
+      "index": 242,
+      "style": "normal",
+      "text": "The frontend utilizes a component-based layout:"
+    },
+    {
+      "kind": "paragraph",
+      "index": 243,
+      "style": "normal",
+      "text": "src/components/layout/"
+    },
+    {
+      "kind": "paragraph",
+      "index": 244,
+      "style": "normal",
+      "text": "AppShell.jsx: Renders the main dashboard shell layout. Contains the navigation header, user profile dropdowns, and theme toggle buttons."
+    },
+    {
+      "kind": "paragraph",
+      "index": 245,
+      "style": "normal",
+      "text": "src/components/ui/"
+    },
+    {
+      "kind": "paragraph",
+      "index": 246,
+      "style": "normal",
+      "text": "index.jsx: Contains reusable UI elements like buttons, inputs, dialog modals, cards, and select lists."
+    },
+    {
+      "kind": "paragraph",
+      "index": 247,
+      "style": "normal",
+      "text": "src/components/"
+    },
+    {
+      "kind": "paragraph",
+      "index": 248,
+      "style": "normal",
+      "text": "AiFoodAnalyzer.jsx: Sub-component enabling users to type natural-language food descriptions and receive nutritional breakdowns."
+    },
+    {
+      "kind": "paragraph",
+      "index": 249,
+      "style": "normal",
+      "text": "PrivateRoute.jsx: Router wrapper validating session status."
+    },
+    {
+      "kind": "paragraph",
+      "index": 250,
+      "style": "normal",
+      "text": "ProfileSetup.jsx: Wizard container prompting new users for stats upon registration."
+    },
+    {
+      "kind": "paragraph",
+      "index": 251,
+      "style": "normal",
+      "text": "src/pages/"
+    },
+    {
+      "kind": "paragraph",
+      "index": 252,
+      "style": "normal",
+      "text": "Dashboard.jsx: The home dashboard page. Renders remaining calorie rings and macro charts using Recharts."
+    },
+    {
+      "kind": "paragraph",
+      "index": 253,
+      "style": "normal",
+      "text": "Meals.jsx: Renders logged food item lists and forms to input meals."
+    },
+    {
+      "kind": "paragraph",
+      "index": 254,
+      "style": "normal",
+      "text": "FoodSearch.jsx: Semantic search interface displaying food details and nutrition targets."
+    },
+    {
+      "kind": "paragraph",
+      "index": 255,
+      "style": "normal",
+      "text": "Chat.jsx: Session chat panel with the RAG nutrition coach."
+    },
+    {
+      "kind": "paragraph",
+      "index": 256,
+      "style": "normal",
+      "text": "Profile.jsx: Displays user statistics and enables target recalculations."
+    },
+    {
+      "kind": "paragraph",
+      "index": 257,
+      "style": "normal",
+      "text": "Admin.jsx: Admin dashboard displaying user list controls."
+    },
+    {
+      "kind": "paragraph",
+      "index": 258,
+      "style": "normal",
+      "text": "Login.jsx & Register.jsx: Authentication pages."
+    },
+    {
+      "kind": "paragraph",
+      "index": 259,
+      "style": "Heading 2",
+      "text": "Project Execution:"
+    },
+    {
+      "kind": "paragraph",
+      "index": 260,
+      "style": "normal",
+      "text": "Step 1: Set Up the Frontend (React App)"
+    },
+    {
+      "kind": "paragraph",
+      "index": 261,
+      "style": "normal",
+      "text": "1. Open a terminal and navigate to the client folder:"
+    },
+    {
+      "kind": "paragraph",
+      "index": 262,
+      "style": "normal",
+      "text": "`cd client`"
+    },
+    {
+      "kind": "paragraph",
+      "index": 263,
+      "style": "normal",
+      "text": "2. Start the Vite React client:"
+    },
+    {
+      "kind": "paragraph",
+      "index": 264,
+      "style": "normal",
+      "text": "`npm run dev`"
+    },
+    {
+      "kind": "paragraph",
+      "index": 265,
+      "style": "normal",
+      "text": "3. The development server will run on:"
+    },
+    {
+      "kind": "paragraph",
+      "index": 266,
+      "style": "normal",
+      "text": "`http://localhost:5173`"
+    },
+    {
+      "kind": "paragraph",
+      "index": 267,
+      "style": "normal",
+      "text": "Step 2: Set Up the Backend (Express Server)"
+    },
+    {
+      "kind": "paragraph",
+      "index": 268,
+      "style": "normal",
+      "text": "1. Open a separate terminal and navigate to the server folder:"
+    },
+    {
+      "kind": "paragraph",
+      "index": 269,
+      "style": "normal",
+      "text": "`cd server`"
+    },
+    {
+      "kind": "paragraph",
+      "index": 270,
+      "style": "normal",
+      "text": "2. Install dependencies if not already done:"
+    },
+    {
+      "kind": "paragraph",
+      "index": 271,
+      "style": "normal",
+      "text": "`npm install`"
+    },
+    {
+      "kind": "paragraph",
+      "index": 272,
+      "style": "normal",
+      "text": "Step 3: Configure Environment Variables"
+    },
+    {
+      "kind": "paragraph",
+      "index": 273,
+      "style": "normal",
+      "text": "1. In the `server` folder, create a file named `.env`:"
+    },
+    {
+      "kind": "paragraph",
+      "index": 274,
+      "style": "normal",
+      "text": "```env"
+    },
+    {
+      "kind": "paragraph",
+      "index": 275,
+      "style": "normal",
+      "text": "PORT=5500"
+    },
+    {
+      "kind": "paragraph",
+      "index": 276,
+      "style": "normal",
+      "text": "MONGO_URI=mongodb://localhost:27017/NutriGPT"
+    },
+    {
+      "kind": "paragraph",
+      "index": 277,
+      "style": "normal",
+      "text": "JWT_SECRET=nutrigpt_super_secret_key_change_this"
+    },
+    {
+      "kind": "paragraph",
+      "index": 278,
+      "style": "normal",
+      "text": "JWT_EXPIRE=1d"
+    },
+    {
+      "kind": "paragraph",
+      "index": 279,
+      "style": "normal",
+      "text": "NODE_ENV=development"
+    },
+    {
+      "kind": "paragraph",
+      "index": 280,
+      "style": "normal",
+      "text": "GEMINI_API_KEY=your_gemini_api_key_here"
+    },
+    {
+      "kind": "paragraph",
+      "index": 281,
+      "style": "normal",
+      "text": "GEMINI_CHAT_MODEL=gemini-2.5-flash"
+    },
+    {
+      "kind": "paragraph",
+      "index": 282,
+      "style": "normal",
+      "text": "GEMINI_EMBEDDING_MODEL=gemini-embedding-001"
+    },
+    {
+      "kind": "paragraph",
+      "index": 283,
+      "style": "normal",
+      "text": "RATE_LIMIT_WINDOW_MS=900000"
+    },
+    {
+      "kind": "paragraph",
+      "index": 284,
+      "style": "normal",
+      "text": "RATE_LIMIT_MAX=100"
+    },
+    {
+      "kind": "paragraph",
+      "index": 285,
+      "style": "normal",
+      "text": "AI_RATE_LIMIT_MAX=20"
+    },
+    {
+      "kind": "paragraph",
+      "index": 286,
+      "style": "normal",
+      "text": "USE_ATLAS_VECTOR_SEARCH=false"
+    },
+    {
+      "kind": "paragraph",
+      "index": 287,
+      "style": "normal",
+      "text": "```"
+    },
+    {
+      "kind": "paragraph",
+      "index": 288,
+      "style": "normal",
+      "text": "Step 4: Seed Database and Generate Embeddings"
+    },
+    {
+      "kind": "paragraph",
+      "index": 289,
+      "style": "normal",
+      "text": "Seeding initializes the food items database and generates vector embeddings:"
+    },
+    {
+      "kind": "paragraph",
+      "index": 290,
+      "style": "normal",
+      "text": "`npm run seed:foods`"
+    },
+    {
+      "kind": "paragraph",
+      "index": 291,
+      "style": "normal",
+      "text": "`npm run seed:embeddings`"
+    },
+    {
+      "kind": "paragraph",
+      "index": 292,
+      "style": "normal",
+      "text": "Step 5: Start the Backend Server"
+    },
+    {
+      "kind": "paragraph",
+      "index": 293,
+      "style": "normal",
+      "text": "Start the Express backend:"
+    },
+    {
+      "kind": "paragraph",
+      "index": 294,
+      "style": "normal",
+      "text": "`npm run dev`"
+    },
+    {
+      "kind": "paragraph",
+      "index": 295,
+      "style": "normal",
+      "text": "The server will run on:"
+    },
+    {
+      "kind": "paragraph",
+      "index": 296,
+      "style": "normal",
+      "text": "`http://localhost:5500`"
+    },
+    {
+      "kind": "paragraph",
+      "index": 297,
+      "style": "Heading 2",
+      "text": "Output ScreenShots:"
+    },
+    {
+      "kind": "paragraph",
+      "index": 298,
+      "style": "Heading 2",
+      "text": "HomePage / Dashboard Page:"
+    },
+    {
+      "kind": "paragraph",
+      "index": 302,
+      "style": "Heading 2",
+      "text": "Login Page:"
+    },
+    {
+      "kind": "paragraph",
+      "index": 304,
+      "style": "Heading 2",
+      "text": "Register Page:"
+    },
+    {
+      "kind": "paragraph",
+      "index": 306,
+      "style": "Heading 2",
+      "text": "Profile Setup Page:"
+    },
+    {
+      "kind": "paragraph",
+      "index": 308,
+      "style": "Heading 2",
+      "text": "Meals Tracker Page:"
+    },
+    {
+      "kind": "paragraph",
+      "index": 310,
+      "style": "Heading 2",
+      "text": "Food Search Page:"
+    },
+    {
+      "kind": "paragraph",
+      "index": 312,
+      "style": "Heading 2",
+      "text": "AI Coach Chat Page:"
+    },
+    {
+      "kind": "paragraph",
+      "index": 314,
+      "style": "Heading 2",
+      "text": "Admin Dashboard Page:"
+    },
+    {
+      "kind": "paragraph",
+      "index": 316,
+      "style": "Heading 2",
+      "text": "Demo video link"
+    },
+    {
+      "kind": "paragraph",
+      "index": 318,
+      "style": "Heading 2",
+      "text": "Code drive link"
+    },
+    {
+      "kind": "paragraph",
+      "index": 319,
+      "style": "normal",
+      "text": "https://drive.google.com/drive/folders/12So725-hcZA-_uJZZCmFiJHnZGz1_sfC?usp=drive_link"
+    }
+  ]
+}

@@ -6,7 +6,7 @@ import { apiUrl } from '../../utils/api';
 
 const Page = styled.div`
     min-height: 100vh;
-    padding: 96px 16px 28px;
+    padding: 124px 16px 28px;
     display: flex;
     justify-content: center;
     background: transparent;
@@ -17,7 +17,7 @@ const Shell = styled.div`
     max-width: 820px;
     display: flex;
     flex-direction: column;
-    height: calc(100vh - 124px);
+    height: calc(100vh - 152px);
     background: linear-gradient(180deg, rgba(255, 255, 255, 0.94) 0%, rgba(255, 255, 255, 0.84) 100%);
     border: 1px solid rgba(255, 255, 255, 0.76);
     border-radius: var(--radius-lg);

@@ -24,7 +24,7 @@ const monthOptions = [
 
 const Page = styled.div`
     min-height: 100vh;
-    padding: 112px 20px 64px;
+    padding: 128px 20px 64px;
     display: flex;
     justify-content: center;
     align-items: flex-start;
