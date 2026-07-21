@@ -1,4 +1,6 @@
 import './App.css';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import { useEffect } from 'react';
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom'; // Import Redirect
 import Header from './components/Header';
@@ -66,8 +68,40 @@ function App() {
           </i>
           <i className="ambient-cube-shadow" />
         </span>
+        <span className="ambient-bank-card-stage">
+          <i className="ambient-bank-card">
+            <b className="bank-card-chip" />
+            <b className="bank-card-wave">)))</b>
+            <strong>FinGPT</strong>
+            <small>••••  2846</small>
+            <em>SMART WALLET</em>
+          </i>
+          <i className="ambient-card-shadow" />
+        </span>
+        <span className="ambient-coin-stack" aria-hidden="true">
+          <i /><i /><i /><i /><i />
+          <b>₹</b>
+        </span>
+        <span className="ambient-data-globe">
+          <i className="globe-core" />
+          <i className="globe-ring globe-ring-a" />
+          <i className="globe-ring globe-ring-b" />
+          <i className="globe-ring globe-ring-c" />
+          <b className="globe-node node-a" /><b className="globe-node node-b" /><b className="globe-node node-c" />
+        </span>
         <span className="ambient-grain" />
       </div>
+      <ToastContainer
+        position="top-right"
+        autoClose={3000}
+        hideProgressBar={false}
+        newestOnTop
+        closeOnClick
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="light"
+      />
       <div className="app-content">
         <BrowserRouter future={{ v7_startTransition: true, v7_relativeSplatPath: true }}>
           <Header />

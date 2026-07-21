@@ -330,6 +330,78 @@
   animation: cube-shadow-pulse 9s ease-in-out infinite alternate;
 }
 
+.ambient-bank-card-stage {
+  position: absolute;
+  left: 16%;
+  top: 18%;
+  width: 230px;
+  height: 145px;
+  perspective: 900px;
+  transform-style: preserve-3d;
+  opacity: .32;
+  animation: card-stage-drift 13s ease-in-out infinite alternate;
+}
+.ambient-bank-card {
+  position: absolute;
+  inset: 0;
+  display: block;
+  overflow: hidden;
+  border-radius: 18px;
+  border: 1px solid rgba(255,255,255,.82);
+  background:
+    radial-gradient(circle at 88% 10%, rgba(213,177,98,.32), transparent 35%),
+    linear-gradient(135deg, rgba(18,61,58,.74), rgba(15,118,110,.42));
+  box-shadow: 0 32px 55px rgba(19,60,57,.19), inset 0 1px 0 rgba(255,255,255,.45);
+  color: rgba(255,255,255,.88);
+  transform-style: preserve-3d;
+  animation: bank-card-turn 14s ease-in-out infinite alternate;
+}
+.ambient-bank-card::after {
+  content: "";
+  position: absolute;
+  width: 170px;
+  height: 170px;
+  right: -92px;
+  bottom: -105px;
+  border: 1px solid rgba(255,255,255,.28);
+  border-radius: 50%;
+  box-shadow: 0 0 0 18px rgba(255,255,255,.04), 0 0 0 40px rgba(255,255,255,.025);
+}
+.bank-card-chip{position:absolute;left:25px;top:43px;width:36px;height:28px;border-radius:6px;background:linear-gradient(145deg,#ecd69c,#b88b35);box-shadow:inset 0 0 0 1px rgba(93,63,16,.18)}
+.bank-card-wave{position:absolute;left:68px;top:43px;letter-spacing:-5px;transform:rotate(90deg);font:400 13px var(--font-ui);opacity:.65}
+.ambient-bank-card strong{position:absolute;left:25px;top:18px;font:750 16px var(--font-ui);letter-spacing:-.03em}.ambient-bank-card small{position:absolute;left:25px;bottom:27px;font:650 13px var(--font-numeric);letter-spacing:.12em}.ambient-bank-card em{position:absolute;right:19px;bottom:19px;font:700 7px var(--font-ui);letter-spacing:.14em;font-style:normal;opacity:.7}
+.ambient-card-shadow{position:absolute;width:210px;height:38px;left:10px;top:155px;border-radius:50%;background:rgba(22,65,61,.16);filter:blur(14px);transform:rotateX(70deg);animation:card-shadow-breathe 13s ease-in-out infinite alternate}
+
+.ambient-coin-stack {
+  position: absolute;
+  right: 21%;
+  bottom: 12%;
+  width: 112px;
+  height: 120px;
+  perspective: 700px;
+  transform-style: preserve-3d;
+  opacity: .36;
+  animation: coin-stack-float 10s ease-in-out infinite alternate;
+}
+.ambient-coin-stack i{position:absolute;left:12px;width:88px;height:27px;border-radius:50%;border:1px solid rgba(255,255,255,.76);background:linear-gradient(180deg,#eed69c,#c2933d);box-shadow:inset 0 -7px 10px rgba(98,65,18,.16),0 8px 12px rgba(91,65,26,.09);transform:rotateX(68deg)}
+.ambient-coin-stack i:nth-child(1){bottom:2px}.ambient-coin-stack i:nth-child(2){bottom:16px}.ambient-coin-stack i:nth-child(3){bottom:30px}.ambient-coin-stack i:nth-child(4){bottom:44px}.ambient-coin-stack i:nth-child(5){bottom:58px;animation:top-coin-lift 4s ease-in-out infinite alternate}
+.ambient-coin-stack b{position:absolute;left:43px;bottom:71px;color:rgba(111,74,17,.62);font:750 22px var(--font-display);transform:rotateX(62deg)}
+
+.ambient-data-globe {
+  position: absolute;
+  left: 38%;
+  bottom: 8%;
+  width: 190px;
+  height: 190px;
+  perspective: 800px;
+  transform-style: preserve-3d;
+  opacity: .3;
+  animation: globe-float 15s ease-in-out infinite alternate;
+}
+.globe-core{position:absolute;inset:35px;border-radius:50%;background:radial-gradient(circle at 35% 28%,rgba(255,255,255,.72),rgba(68,151,138,.25) 46%,rgba(15,118,110,.12));border:1px solid rgba(255,255,255,.8);box-shadow:inset -18px -18px 30px rgba(15,78,70,.12),0 22px 45px rgba(30,75,70,.12)}
+.globe-ring{position:absolute;inset:18px;border-radius:50%;border:1px solid rgba(15,118,110,.28);transform-style:preserve-3d}.globe-ring-a{animation:globe-ring-a 11s linear infinite}.globe-ring-b{animation:globe-ring-b 14s linear infinite reverse}.globe-ring-c{inset:4px;animation:globe-ring-c 17s linear infinite}
+.globe-node{position:absolute;width:10px;height:10px;border-radius:50%;background:#d2a84f;box-shadow:0 0 16px rgba(210,168,79,.5)}.node-a{left:22px;top:71px}.node-b{right:25px;top:47px;background:#3b8e82}.node-c{right:51px;bottom:19px;background:#557ca5}
+
 @keyframes ambient-drift-a {
   from { transform: translate3d(0,0,0) scale(1); }
   to { transform: translate3d(9vw,7vh,0) scale(1.13); }
@@ -401,6 +473,15 @@
   from { opacity: .55; transform: rotateX(72deg) scale(.84); }
   to { opacity: .25; transform: rotateX(72deg) scale(1.14); }
 }
+@keyframes card-stage-drift{from{transform:translate3d(0,0,0) rotateZ(-5deg)}to{transform:translate3d(5vw,5vh,50px) rotateZ(3deg)}}
+@keyframes bank-card-turn{from{transform:rotateX(8deg) rotateY(20deg)}to{transform:rotateX(-7deg) rotateY(-17deg) translateZ(34px)}}
+@keyframes card-shadow-breathe{from{opacity:.5;transform:rotateX(70deg) scale(.84)}to{opacity:.22;transform:rotateX(70deg) scale(1.12)}}
+@keyframes coin-stack-float{from{transform:translateY(0) rotateY(-12deg)}to{transform:translateY(-35px) rotateY(18deg)}}
+@keyframes top-coin-lift{from{transform:rotateX(68deg) translateZ(0)}to{transform:rotateX(68deg) translateZ(28px) translateY(-16px)}}
+@keyframes globe-float{from{transform:translate3d(0,0,0) rotateZ(-3deg)}to{transform:translate3d(-3vw,-5vh,42px) rotateZ(4deg)}}
+@keyframes globe-ring-a{to{transform:rotateX(68deg) rotateZ(360deg)}}
+@keyframes globe-ring-b{to{transform:rotateY(72deg) rotateZ(360deg)}}
+@keyframes globe-ring-c{to{transform:rotateX(35deg) rotateY(48deg) rotateZ(360deg)}}
 
 @media (max-width: 720px) {
   .ambient-orb { opacity: .48; }
@@ -411,6 +492,9 @@
   .ambient-3d-left { left: -5rem; }
   .ambient-3d-right { right: -6rem; }
   .ambient-cube-stage { left: 42%; top: 42%; opacity: .2; transform: scale(.68); }
+  .ambient-bank-card-stage { left: -70px; top: 24%; opacity: .18; transform: scale(.7); }
+  .ambient-coin-stack { right: -24px; opacity: .2; transform: scale(.72); }
+  .ambient-data-globe { display: none; }
 }
 
 @media (prefers-reduced-motion: reduce) {

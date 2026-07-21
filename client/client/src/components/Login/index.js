@@ -3,6 +3,7 @@ import { Form, Button } from 'react-bootstrap';
 import { Link, useNavigate } from 'react-router-dom';
 import { FaWallet, FaEnvelope, FaLock, FaEye, FaEyeSlash } from 'react-icons/fa';
 import Cookies from 'js-cookies';
+import { toast } from 'react-toastify';
 import { apiUrl } from '../../utils/api';
 
 const commonFields = [
@@ -42,12 +43,13 @@ const Login = () => {
                 Cookies.setItem('jwtToken', data.token, 30 * 24 * 60 * 60, '/')
                 Cookies.setItem('userId', data.user._id, 30 * 24 * 60 * 60, '/')
                 Cookies.setItem('userName', data.user.firstname, 30 * 24 * 60 * 60, '/')
-                navigate('/');
+                toast.success(`Welcome back, ${data.user.firstname}! 🎉`);
+                setTimeout(() => navigate('/'), 1000);
             } else {
-                alert("Email or Password didn't match");
+                toast.error("Email or Password didn't match. Please try again.");
             }
         } catch (error) {
-            alert('Error during login:', error);
+            toast.error('Something went wrong. Please try again.');
         }
     };
 
